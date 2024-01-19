@@ -156,7 +156,11 @@ h3 {
     animation-delay: 3s;
 }
 #mic-image {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+#mic-image-2 {
+    width: 60%;
     margin: 0 auto;
 }
 /* For desktop devices */
@@ -218,7 +222,7 @@ h3 {
     padding-bottom: 80%;
     border-radius: 50%;
     background: linear-gradient(45deg, #B25E3C, #FFFFE2);
-    filter: blur(20px);
+    filter: blur(40px);
     position: absolute;
     top: -10%;
     left: -10%;
@@ -234,7 +238,7 @@ h3 {
     padding-bottom: 160%;
     border-radius: 50%;
     background: linear-gradient(0deg, #B25E3C, #FFFFE2);
-    filter: blur(20px);
+    filter: blur(40px);
     position: absolute;
     bottom: -60%;
     left: -40px;
@@ -244,6 +248,114 @@ h3 {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
+.ball-3{
+    width: 140%;
+    height: 0;
+    padding-bottom: 140%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #B25E3C, #FFFFE2);
+    filter: blur(40px);
+    position: absolute;
+    top: -20%;
+    right: -40%;
+    z-index: -1;
+    animation-name: rotate;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.ball-4{
+    width: 60%;
+    height: 0;
+    padding-bottom: 60%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #B25E3C, #FFFFE2);
+    filter: blur(40px);
+    position: absolute;
+    top: 0;
+    right: -10%;
+    z-index: -1;
+    animation-name: rotate;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.ball-5{
+    width: 140%;
+    height: 0;
+    padding-bottom: 140%;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #B25E3C, #FFFFE2);
+    filter: blur(40px);
+    position: absolute;
+    bottom: 10%;
+    left: -20%;
+    z-index: -1;
+    animation-name: rotate;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.message-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 0;
+    padding-bottom: 90%;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 40%;
+    border-radius: 100%;
+    /* box-shadow: 0 0 20px 0 rgba(0,0,0,0.25); */
+}
+.message-box::after, .message-box::before {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    width: 100%;
+    border: 8px solid rgba(255,255,255,0.6);
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.message-box::after {
+    animation: ripple 3s 0s infinite cubic-bezier(.65,0,.34,1);
+}
+
+.message-box::before {
+    animation: ripple 3s 0.5s infinite cubic-bezier(.65,0,.34,1);
+}
+
+@keyframes ripple {
+    from {
+        opacity: 1;
+        transform: scale3d(1,1,1.5);
+    }
+    to {
+        opacity: 0;
+        transform: scale3d(2,2,1.5);
+    }
+}
+.text_content {
+    position: absolute;
+    top: 25%;
+}
+.conversation_content {
+    font-size: 1.4em;
+}
+
 #view-1 {
     /* transform: translateX(0); */
     opacity: 1;
