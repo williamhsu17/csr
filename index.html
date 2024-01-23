@@ -24,7 +24,7 @@
     <div class="container">
         <div class="row mt-0">
             <div id="app" class="mx-0 px-0">
-                <div id="view-1" class="view">
+                <div id="view-1" class="view hidden">
                     <div class="container-fluid">
                         <div class="row" style="height: 86vh;">
                             <div class="title-box mt-5 pt-3">
@@ -118,8 +118,6 @@
                         </div>
                         <button id="q4-btn" class="next-btn mt-5 mb-3">選好了&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
                     </div>
-                    <img src="img/Q3_nav.svg" class="question_nav" alt="">
-                    <!-- <button id="q3-btn">Next</button> -->
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
                 </div>
@@ -211,7 +209,7 @@
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
                 </div>
-                <div id="view-5" class="view hidden">
+                <div id="view-8" class="view hidden">
                     <div class="container-fluid">
                         <div class="row" style="height: 28vh;">
                             <div class="title-box mt-5">
@@ -243,21 +241,48 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="q6-btn" class="next-btn mt-5 mb-3">我準備好了</button>
+                        
+                        <button id="q7-btn" class="next-btn mt-5 mb-3">下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
                     </div>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
                 </div>
-                <div id="view-wait" class="view hidden">
-                    <div class="containier">
-                        <div class="row align-items-center" style="height: 80vh;">
-                            <div class="col-md-12 justify-content-center">
-                                <!-- <div class="loader mx-auto"></div> -->
-                                <img src="img/Loading_icon.svg" class="processing_img" alt="">
-                                <img src="img/city_building.svg" id="city_building" class="d-block mx-auto mt-5" alt="city_building">
+                <div id="view-9" class="view">
+                    <div class="container-fluid mx-0 px-0">
+                        <div class="row" style="height: 60vh;">
+                            <div class="title-box mt-5">
+                                <div class="" style="margin-top: 76%;">
+                                    <img src="img/context_generating.svg" style="width: 100%;" alt="">
+                                    <p class="mb-1 mt-5" style="font-size: 1em;">情感醞釀中，請稍候...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="q8-btn" class="mt-5 mb-3">next</button>
+                    </div>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <div id="view-10" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 86vh;">
+                            <div class="title-box message-box">
+                                <div class="text_content">
+                                    <p class="conversation_content mb-5">你願意親身錄下聲音</p>
+                                    <p class="conversation_content mb-1">讓我為你的聲音採樣?</p>
+                                </div>
+                            </div>
+                            <img class="" id="mic-image-3" src="img/mic.svg" alt="">
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button id="" class="next-btn mt-3" style="width: 80%;">我同意</button>
+                            </div>
+                            <div class="col-6">
+                                <button id="" class="next-btn mt-3" style="width: 80%;">AI幫幫我</button>
                             </div>
                         </div>
                     </div>
+                    <div class="ball-3"></div>
                 </div>
                 <div id="view-7-1" class="view hidden">
                     <div class="container-fluid mx-0 px-0">
@@ -285,7 +310,7 @@
                                     <button class="btn btn-share-again" id="btn-share"><img src="img/btn_share.svg" class="result_icons" alt="">儲存圖片</button>
                                 </div>
                                 <div class="col col-md-2">
-                                    <button class="btn btn-share-again" id="q7-btn"><img src="img/btn_more.svg" class="result_icons" alt="">更多作品</button>
+                                    <button class="btn btn-share-again" id=""><img src="img/btn_more.svg" class="result_icons" alt="">更多作品</button>
                                 </div>
                             </div>
                             <div class="row mt-1 d-flex justify-content-between align-items-end">
@@ -298,7 +323,7 @@
                 <div id="view-8-1" class="view hidden">
                     <div class="container-fluid mt-xs-3 mt-sm-0">
                         <div class="row">
-                            <button class="mx-auto btn" id="q8-btn" style="max-width: 100px;"><img src="img/text/return.svg" alt=""></button>
+                            <button class="mx-auto btn" id="" style="max-width: 100px;"><img src="img/text/return.svg" alt=""></button>
                         </div>
                     </div>
                     <div class="container-fluid">
@@ -349,7 +374,7 @@
                         </div>
                     </footer>
                 </div>
-                <div id="view-9" class="view hidden">
+                <div id="view-9-1" class="view hidden">
                     <div class="container-fluid mt-xs-3 mt-sm-0">
                         <div class="row">
                             <button class="mx-auto btn" id="q9-btn" style="max-width: 100px;"><img src="img/text/return.svg" alt=""></button>
@@ -379,7 +404,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="view-10" class="view hidden">
+                <div id="view-10-1" class="view hidden">
                     <div class="container-fluid hide-scrollbar py-3" style="background-color: #6976D4; height: 80vh;">
                         <div class="row">
                             <div class="col d-flex justify-content-end">
@@ -523,11 +548,13 @@
         const q4Btn = document.getElementById('q4-btn');
         const q5Btn = document.getElementById('q5-btn');
         const q6Btn = document.getElementById('q6-btn');
+        const q7Btn = document.getElementById('q7-btn');
+        const q8Btn = document.getElementById('q8-btn');
 
         const views = document.getElementsByClassName('view');
         const result = document.getElementById('result');
-        const q7Btn = document.getElementById('q7-btn');
-        const q8Btn = document.getElementById('q8-btn');
+        // const q7Btn = document.getElementById('q7-btn');
+        // const q8Btn = document.getElementById('q8-btn');
         const q9Btn = document.getElementById('q9-btn');
 
         const btnHome = document.getElementById('btn_home');
@@ -621,7 +648,16 @@
             navigateToView(6);
         });
         q6Btn.addEventListener('click', () => {
+            console.log('q6Btn')
             navigateToView(7);
+        });
+        q7Btn.addEventListener('click', () => {
+            console.log('q7Btn')
+            navigateToView(8);
+        });
+        q8Btn.addEventListener('click', () => {
+            console.log('q8Btn')
+            navigateToView(9);
         });
 
         startBuildingBtn.addEventListener('click', () => {
@@ -686,46 +722,13 @@
             });
         }
 
-        // q1Btn.addEventListener('click', () => {
-        //     navigateToView(3);
+        // q7Btn.addEventListener('click', () => {
+        //     console.log('q7Btn')
+        //     navigateToView(8);
         // });
-
-        // q2Btn.addEventListener('click', () => {
-        //     navigateToView(4);
+        // q8Btn.addEventListener('click', () => {
+        //     navigateToView(7);
         // });
-
-        // q3Btn.addEventListener('click', () => {
-        //     navigateToView(5);
-        // });
-
-        // q4Btn.addEventListener('click', () => {
-        //     navigateToView(6); // Show the wait view
-        //     handleResults();
-        //     setTimeout(() => {
-        //         displayResults();
-        //         navigateToView(7); // Show the result view after 5 seconds
-        //     }, 7000);
-        // });
-        
-        // const btnTest = document.getElementById('test_button');
-        // btnTest.addEventListener('click', () => {
-        //     navigateToView(11);
-            
-        //     document.getElementById('swipe-background').style.backgroundPosition = '100% center';
-        //     setTimeout(() => {
-        //         // document.body.style.backgroundImage = originalBackgroundImage;
-        //         document.getElementById('swipe-background').style.backgroundPosition = '0% center';
-        //     }, 2000);
-            
-        //     document.getElementById('navbar').classList.add('hidden');
-        // });
-
-        q7Btn.addEventListener('click', () => {
-            navigateToView(8);
-        });
-        q8Btn.addEventListener('click', () => {
-            navigateToView(7);
-        });
         q9Btn.addEventListener('click', () => {
             navigateToView(7);
         });
@@ -831,7 +834,7 @@
             
             btnPlayAgain.style.background = resultMaterial[randomInt].color;
             btnShare.style.background = resultMaterial[randomInt].color;
-            q7Btn.style.background = resultMaterial[randomInt].color;
+            // q7Btn.style.background = resultMaterial[randomInt].color;
             btnLoadMore.style.background = resultMaterial[randomInt].color;
             
             btnBottom2.style.background = resultMaterial[randomInt].color;
