@@ -13,6 +13,8 @@ body {
     background-color: #E4DBDE;
     font-family: 'Proxima', sans-serif;
     overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 h1, p, span, button {
     font-family: 'Noto Serif TC', serif;
@@ -150,6 +152,17 @@ h3 {
     outline-offset: -12px;
     outline: 1px solid white;
 }
+.next-btn {
+    margin: 0 auto;
+    width: 60%;
+    height: 60px;
+    color: white;
+    background: linear-gradient(to right, #FDAA0A, #FF8845);
+    border: none;
+    border-radius: 60px;
+    outline-offset: -12px;
+    outline: 1px solid white;
+}
 #start-building-btn {
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
@@ -202,11 +215,14 @@ h3 {
 }
 .view {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     text-align: center;
     transition: opacity 1s ease-in-out;
     opacity: 1;
     position: relative;
+    overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 @keyframes rotate {
     from {
@@ -371,16 +387,59 @@ h3 {
     background: radial-gradient(50% 50% at 50% 50%, #A3E0CC 0%, #66B09F 100%);
 }
 
-#q1-btn, #q2-btn, #q3-btn, #q4-btn {
+#q1-btn, #q2-btn, #q3-btn {
     width: 20%;
     border: 0;
-    border-radius: 40px;
-    color: white;
+    border-radius: 20px;
+    color: black;
 }
 
 .q2-btn, .q4-btn {
     background: radial-gradient(50% 50% at 50% 50%, #F8C5CB 0%, #E78A94 100%);
 }
+.boxed-text {
+    border: black solid 1px;
+    border-radius: 5px;
+    background: transparent;
+    width: 60%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 0 auto;
+}
+#q4a_lable, #q4b_lable, #q4c_lable, #q4d_lable {
+    background-size: 100% 100%;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin-bottom: 0%;
+}
+#q4a_lable { background-image: url(../img/q2_1.svg) !important; }
+#q4b_lable { background-image: url(../img/q2_2d.svg) !important; padding-right: 20%;}
+#q4c_lable { background-image: url(../img/q2_3.svg) !important; }
+#q4d_lable { background-image: url(../img/q2_4d.svg) !important; }
+
+#q5a_lable, #q5b_lable, #q5c_lable, #q5d_lable {
+    background-size: 100% 100%;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 50%;
+    padding-bottom: 50%;
+    margin-bottom: 0%;
+}
+#q5a_lable { background-image: url(../img/q5a.svg) !important; }
+#q5a_lable span {display: inline-block; transform: rotate(-5deg);}
+#q5b_lable { background-image: url(../img/q5b.svg) !important; }
+#q5b_lable span {display: inline-block; transform: rotate(-15deg); padding-right: 20%;}
+#q5c_lable { background-image: url(../img/q5c.svg) !important; }
+#q5c_lable span {display: inline-block; transform: rotate(15deg);}
+#q5d_lable { background-image: url(../img/q5d_d.svg) !important; }
 
 /* Hide radio buttons */
 input[type="radio"] {
@@ -394,21 +453,19 @@ input[type="radio"] + label {
     margin-bottom: 3%;
     border: 1px solid transparent;
     width: 70%;
-    border-radius: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    background: #FFF8E0;
     
-    color: white;
-    font-size: larger;
-    letter-spacing: 5px;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Noto Serif TC', serif;
+    font-size: medium;
 }
 
 input[type="radio"]:hover + label {
-    background: radial-gradient(50% 50% at 50% 50%, #F4F2A9 35.94%, #F8CC71 100%);
-    color: #555294;
+    background: #FFEBA8;
 }
 input[type="radio"]:checked + label {
-    background: radial-gradient(50% 50% at 50% 50%, #F4F2A9 35.94%, #F8CC71 100%);
-    color: #555294;
+    background: #FFEBA8;
 }
 .loader {
     border: 8px solid #f3f3f3;
@@ -764,8 +821,8 @@ input[type="radio"]:checked + label {
 }
 .hide-scrollbar {
     overflow-y: auto;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
