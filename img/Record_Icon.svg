@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 97.54 97.03" style="enable-background:new 0 0 97.54 97.03;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FDAA0A;fill-opacity:0.3;}
+	.st1{fill:url(#SVGID_1_);fill-opacity:0.8;}
+	.st2{clip-path:url(#SVGID_00000114044547264222636350000017803199085575596433_);}
+	.st3{fill:#FFFFFF;}
+</style>
+<g>
+	<circle shape-rendering="crispEdges" class="st0" cx="49.07" cy="48.42" r="47.5"/>
+</g>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-193.426" y1="627.9741" x2="-193.426" y2="548.9741" gradientTransform="matrix(1 0 0 -1 242.5 636.8893)">
+	<stop  offset="0" style="stop-color:#FF8845"/>
+	<stop  offset="1" style="stop-color:#FDAA0A;stop-opacity:0.9922"/>
+</linearGradient>
+<circle class="st1" cx="49.07" cy="48.42" r="39.5"/>
+<g>
+	<defs>
+		<rect id="SVGID_00000078015226773975170620000010054913614824439182_" x="31.57" y="23.92" width="35" height="49"/>
+	</defs>
+	<clipPath id="SVGID_00000172408982800965296790000005932012568317760146_">
+		<use xlink:href="#SVGID_00000078015226773975170620000010054913614824439182_"  style="overflow:visible;"/>
+	</clipPath>
+	<g style="clip-path:url(#SVGID_00000172408982800965296790000005932012568317760146_);">
+		<path class="st3" d="M64.21,40.05c-1.31,0-2.36,1.08-2.36,2.41v4.61c0,2.87-1.4,5.68-3.95,7.9c-2.51,2.19-5.73,3.45-8.82,3.45
+			s-6.31-1.26-8.82-3.45c-2.54-2.22-3.95-5.03-3.95-7.9v-4.61c0-1.33-1.06-2.41-2.36-2.41c-1.31,0-2.36,1.08-2.36,2.41v4.61
+			c0,4.3,1.99,8.4,5.59,11.55c2.73,2.39,6.11,3.94,9.54,4.44v4.27h-3.69c-1.52,0-2.74,1.25-2.74,2.79s1.23,2.79,2.74,2.79h12.11
+			c1.52,0,2.74-1.25,2.74-2.79s-1.23-2.79-2.74-2.79h-3.69v-4.27c3.43-0.5,6.81-2.06,9.54-4.44c3.61-3.15,5.59-7.26,5.59-11.55
+			v-4.61C66.57,41.13,65.51,40.05,64.21,40.05z"/>
+		<path class="st3" d="M49.07,54.72c5.02,0,9.08-4.14,9.08-9.24V33.16c0-5.1-4.07-9.24-9.08-9.24s-9.08,4.14-9.08,9.24v12.32
+			C39.99,50.58,44.06,54.72,49.07,54.72z"/>
+	</g>
+</g>
+</svg>

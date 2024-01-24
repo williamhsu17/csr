@@ -493,6 +493,18 @@ input[type="radio"]:checked + label {
 .result_image, .share_result_image {
     max-width: 100%;
 }
+.record_message_box {
+    padding-top: 10%;
+    border: white solid 2px;
+    border-radius: 5%;
+}
+.record_icon {
+    margin-top: 10%;
+    width: 100px;
+    height: auto;
+    background-color: transparent;
+    border: none;
+}
 /* For large desktop devices */
 @media only screen and (min-width: 1600px) {
     .result_image, .share_result_image {
