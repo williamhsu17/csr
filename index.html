@@ -397,20 +397,59 @@
                                 <button id="" class="next-btn mt-3 py-1" style="width: 100%; height: 100%;">邀請朋友<br>一起玩</button>
                             </div>
                             <div class="col-6">
-                                <button id="q13-btn" class="next-btn mt-3 py-1" style="width: 100%; height: 100%;">分享給<br>他/她</button>
+                                <button id="" class="next-btn mt-3 py-1" style="width: 100%; height: 100%;">分享給<br>他/她</button>
                             </div>
                             <div class="col-12 mt-3">
-                                <button id="q14-btn" class=" mt-3 invisible_btn"><img src="img/result_watch_more.svg" style="width: 20%; height: auto;" alt=""></button>
+                                <button id="q13-btn" class=" mt-3 invisible_btn"><img src="img/result_watch_more.svg" style="width: 12%; height: auto;" alt=""></button>
                             </div>
                         </div>
                     </div>
                     <div class="ball-1"></div>
                 </div>
+                <div id="view-15" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <button id="q14-btn" class=" mt-3 invisible_btn"><img src="img/result_return.svg" style="width: 12%; height: auto;" alt=""></button>
+                            </div>
+                        </div>
+                        <div class="row" style="height: 16vh;">
+                            <div class="title-box">
+                                <div class="">
+                                    <p class="mt-3 mb-0" style="font-size: 1.4em;"><span style="font-size: 1.6em; color: #F68A26;">愛</span>的心聲已傳達</p>
+                                    <p class="mt-1" style="font-size: 1em;">還有另外一種方式，「再現生機」</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 record_message_box">
+                                <img src="img/soundcard.png" class="mb-3" style="width: 100%;" alt="">
+                                <p class="mb-1" style="color: #3B3B3B;">錄下同意器官捐贈的任何心聲</p>
+                                <p class="mb-1" style="color: #3B3B3B;">讓你的愛和理想</p>
+                                <p class="mb-3" style="color: #3B3B3B;">能被在乎的人聽見、留存記憶中</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <button id="" class="more-btn mt-3 py-2">了解器捐聲紋卡</button>
+                            </div>
+                            <div class="col-12">
+                                <button id="" class="more-btn mt-3 py-2">重新 為愛發聲</button>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="fixed-bottom">
+                        <img src="img/activity.svg" alt="">
+                    </footer>
+                    <div class="ball-3"></div>
+                </div>
             </div>
         </div>
     </div>
     <script>
-        const initView = document.getElementById('view-14')
+        const initView = document.getElementById('view-1')
         initView.classList.remove('hidden');
 
         const imageUrl = 'https://www.nb9060futureplan.com/';
@@ -434,6 +473,8 @@
         const q10Btn = document.getElementById('q10-btn');
         const q11Btn = document.getElementById('q11-btn');
         const q12Btn = document.getElementById('q12-btn');
+        const q13Btn = document.getElementById('q13-btn');
+        const q14Btn = document.getElementById('q14-btn');
 
         const views = document.getElementsByClassName('view');
         const result = document.getElementById('result');
@@ -505,6 +546,12 @@
             navigateToView(12);
         });
         q12Btn.addEventListener('click', () => {
+            navigateToView(13);
+        });
+        q13Btn.addEventListener('click', () => {
+            navigateToView(14);
+        });
+        q14Btn.addEventListener('click', () => {
             navigateToView(13);
         });
 
