@@ -404,7 +404,10 @@
                         <div class="row" style="height: 48vh;">
                             <div class="title-box message-box" style="margin-top: 0;">
                                 <img src="img/result_sound_wave_animation.svg" alt="" style="width: 100%; height: auto; position: absolute; top: 50%; transform: translateY(-50%);">
-                                <img src="img/result_play_icon.svg" alt="" style="width: 20%; height: auto; position: absolute; top: 50%; transform: translateY(-50%);">
+                                <button id="playGeneratedAudioButton" style="width: 20%; height: auto; position: absolute; top: 50%; transform: translateY(-50%); background-color: transparent; border: none; cursor: pointer; z-index: 1000;">
+                                    <img src="img/result_play_icon.svg" alt="">
+                                </button>
+                                <audio id="audio" src="sound/under18 Male-1.m4a"></audio>
                             </div>
                         </div>
                         <div class="row">
@@ -744,6 +747,20 @@
                 document.getElementById("result_content").textContent = JSON.stringify(responseData.content, null, 2);
             }
         }
+
+        const playGeneratedAudioButton = document.getElementById("playGeneratedAudioButton");
+        
+        playGeneratedAudioButton.addEventListener("click", () => {
+            console.log('playGeneratedAudio')
+            const audio = document.getElementById("audio");
+    
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        });
     </script>
 </body>
 </html>
