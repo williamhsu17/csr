@@ -141,25 +141,25 @@
                         <div class="row justify-content-center">
                             <div class="col-12">
                                 <div class="custom-checkbox">
-                                    <input type="checkbox" class="question_3" id="question_3_1" value="我花太少時間陪你們..">
+                                    <input type="checkbox" class="question_3" id="question_3_1" value="我花太少時間陪你們">
                                     <label for="question_3_1" id="q3_1_lable">我花太少時間陪你們...</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="custom-checkbox">
-                                    <input type="checkbox" class="question_3" id="question_3_2" value="謝謝你為家庭付出的一切...">
+                                    <input type="checkbox" class="question_3" id="question_3_2" value="謝謝你為家庭付出的一切">
                                     <label for="question_3_2" id="q3_2_lable">謝謝你為家庭付出的一切...</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="custom-checkbox">
-                                    <input type="checkbox" class="question_3" id="question_3_3" value="謝謝你總是無條件支持我...">
+                                    <input type="checkbox" class="question_3" id="question_3_3" value="謝謝你總是無條件支持我">
                                     <label for="question_3_3" id="q3_3_lable">謝謝你總是無條件支持我...</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="custom-checkbox">
-                                    <input type="checkbox" class="question_3" id="question_3_4" value="我真的好愛你們...">
+                                    <input type="checkbox" class="question_3" id="question_3_4" value="我真的好愛你們">
                                     <label for="question_3_4" id="q3_4_lable">我真的好愛你們...</label>
                                 </div>
                             </div>
@@ -278,6 +278,7 @@
                     <div class="container-fluid">
                         <div class="row" style="height: 86vh;">
                             <div class="title-box message-box">
+                                <p id="result_content" style="font-size: small;">aa，你對我們家庭的愛與付出讓我每天都感到幸福，一路上面對的各種困難，你用你的雙手為我們搭建起最堅固的家。無論我多麼困頓，你總是在我背後無條件支持我，每次看到你堅定的眼神，就有了繼續前進的力量。我希望你知道，你對我來說有多麼重要。再一次對你說：謝謝你，我的朋友aa，謝謝你為家庭付出的一切，謝謝你無條件地支持我。</p>
                                 <div class="text_content">
                                     <p class="conversation_content mb-5">你願意親身錄下聲音</p>
                                     <p class="conversation_content mb-1">讓我為你的聲音採樣?</p>
@@ -287,10 +288,10 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <button id="" class="next-btn mt-3" style="width: 80%;">我同意</button>
+                                <button id="q9-1-btn" class="next-btn mt-3" style="width: 80%;">我同意</button>
                             </div>
                             <div class="col-6">
-                                <button id="q9-btn" class="next-btn mt-3" style="width: 80%;">AI幫幫我</button>
+                                <button id="q9-2-btn" class="next-btn mt-3" style="width: 80%;">AI幫幫我</button>
                             </div>
                         </div>
                     </div>
@@ -463,7 +464,7 @@
         </div>
     </div>
     <script>
-        const initView = document.getElementById('view-8')
+        const initView = document.getElementById('view-1')
         initView.classList.remove('hidden');
 
         const imageUrl = 'https://www.nb9060futureplan.com/';
@@ -483,7 +484,8 @@
         const q6Btn = document.getElementById('q6-btn');
         const q7Btn = document.getElementById('q7-btn');
         const q8Btn = document.getElementById('q8-btn');
-        const q9Btn = document.getElementById('q9-btn');
+        const q9_1Btn = document.getElementById('q9-1-btn');
+        const q9_2Btn = document.getElementById('q9-2-btn');
         const q10Btn = document.getElementById('q10-btn');
         const q11Btn = document.getElementById('q11-btn');
         const q12Btn = document.getElementById('q12-btn');
@@ -559,9 +561,7 @@
 
                         if (this.checked) {
                             this.classList.add("selected");
-                            question4_value = Array.from(question4s)
-                                .filter(checkbox => checkbox.checked)
-                                .map(checkbox => checkbox.value);
+                            question4_value = this.value
                         } else {
                             question4_value = "";
                         }
@@ -588,9 +588,18 @@
             question7_value = question7.value;
         });
 
-        const getData = async (url) => {
+        const getData = async (url, data) => {
             try {
-                const response = await fetch(url);
+                const headers = new Headers({
+                    'Content-Type': 'application/json',
+                });
+
+                const requestOptions = {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(data),
+                };
+                const response = await fetch(url, requestOptions);
 
                 if (!response.ok) {
                 throw new Error(`HTTP error: ${response.status}`);
@@ -598,6 +607,7 @@
 
                 const jsonResponse = await response.json();
                 return jsonResponse;
+
             } catch (error) {
                 console.error('Error sending GET request:', error);
             }
@@ -628,13 +638,17 @@
             navigateToView(7);
         });
         q7Btn.addEventListener('click', () => {
+            handleResults();
             navigateToView(8);
         });
         q8Btn.addEventListener('click', () => {
             navigateToView(9);
         });
-        q9Btn.addEventListener('click', () => {
+        q9_1Btn.addEventListener('click', () => {
             navigateToView(10);
+        });
+        q9_2Btn.addEventListener('click', () => {
+            navigateToView(12);
         });
         q10Btn.addEventListener('click', () => {
             navigateToView(11);
@@ -710,45 +724,24 @@
         }
         async function handleResults() {
             console.log('handleResults')
-            var q1 = document.querySelector('input[name="q1"]:checked').value;
-            var q2 = document.querySelector('input[name="q2"]:checked').value;
-            var q3 = document.querySelector('input[name="q3"]:checked').value;
-            var q4 = document.querySelector('input[name="q4"]:checked').value;
+            var formData = {
+                age: question6_value,
+                gender: question7_value,
+                relation: question1_value,
+                name: question2_value,
+                element: question3_value.join(", "),
+                emotion: question4_value,
+            };
+            console.log(formData)
 
             // Send a GET request with the answers as query parameters
-            const url = `https://chatgptdemo.williamhsu.com.tw/prompts/new_balance/run/?input1=${q1}&input2=${q2}&input3=${q3}&input4=${q4}`;
+            const url = `https://chatgptdemo.williamhsu.com.tw/csr_demo_page/run/`;
             
-            const responseData = await getData(url);
+            const responseData = await getData(url, formData);
 
             if (responseData) {
-                const resultImage = document.getElementById('resultImage');
-                // Set the src attribute of the img element
                 console.log(responseData)
-                if (responseData.url === "") {
-                    resultImage.src = "data:image/png;base64," + responseData.image;
-                } else {
-                    console.log('right place')
-                    fetch(responseData.url)
-                        .then(response => response.blob())
-                        .then(blob => {
-                            // Create a FileReader object
-                            const reader = new FileReader();
-
-                            // Convert the blob to base64 string
-                            reader.readAsDataURL(blob);
-                            reader.onloadend = () => {
-                                const base64String = reader.result;
-
-                                // Assign the base64 string to the img tag
-                                resultImage.src = base64String;
-                            };
-                        })
-                        .catch(error => {
-                            console.error(error);
-                        });
-                    // resultImage.src = responseData.url;
-                }
-                // document.getElementById("image-to-share").src = responseData.url;
+                document.getElementById("result_content").textContent = JSON.stringify(responseData.content, null, 2);
             }
         }
     </script>
