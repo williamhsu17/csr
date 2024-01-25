@@ -141,6 +141,12 @@ h3 {
     animation: grow-shrink 1.2s ease-in-out infinite;
     
 }
+.invisible_btn {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+}
+
 #start-btn, #start-building-btn {
     margin: 0 auto;
     width: 100%;
