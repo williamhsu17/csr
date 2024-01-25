@@ -429,7 +429,64 @@ h3 {
     padding-bottom: 2px;
     margin: 0 auto;
 }
-#q4a_lable, #q4b_lable, #q4c_lable, #q4d_lable {
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style labels to be selectable and show the selected state */
+.custom-dropdown {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    background-color: #FFF8E0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 70%;
+    height: 46px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+}
+.custom-dropdown select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'Noto Serif TC', serif;
+    text-align: center;
+}
+input[type="text"] {
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 3%;
+    border: 1px solid transparent;
+    width: 70%;
+    height: 46px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    background: #FFF8E0;
+    
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: medium;
+}
+.custom-checkbox {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    width: 100%;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox label {
     background-size: 100% 100%;
     background-color: transparent;
     box-shadow: none;
@@ -440,12 +497,35 @@ h3 {
     padding-bottom: 10%;
     margin-bottom: 0%;
 }
-#q4a_lable { background-image: url(../img/q2_1.svg) !important; }
-#q4b_lable { background-image: url(../img/q2_2d.svg) !important; padding-right: 20%;}
-#q4c_lable { background-image: url(../img/q2_3.svg) !important; }
-#q4d_lable { background-image: url(../img/q2_4d.svg) !important; }
+#q3_1_lable { background-image: url(../img/q2_1.svg) }
+#q3_2_lable { background-image: url(../img/q2_2.svg); padding-right: 20%;}
+#q3_3_lable { background-image: url(../img/q2_3.svg) }
+#q3_4_lable { background-image: url(../img/q2_4.svg) }
 
-#q5a_lable, #q5b_lable, #q5c_lable, #q5d_lable {
+.custom-checkbox input[id="question_3_1"].selected + label {
+    background-image: url(../img/q2_1d.svg) !important; 
+}
+.custom-checkbox input[id="question_3_2"].selected + label {
+    background-image: url(../img/q2_2d.svg) !important; 
+    padding-right: 20%;
+}
+.custom-checkbox input[id="question_3_3"].selected + label {
+    background-image: url(../img/q2_3d.svg) !important; 
+}
+.custom-checkbox input[id="question_3_4"].selected + label {
+    background-image: url(../img/q2_4d.svg) !important; 
+}
+.custom-checkbox2 {
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+    user-select: none;
+}
+
+.custom-checkbox2 input[type="checkbox"] {
+    display: none;
+}
+.custom-checkbox2 label {
     background-size: 100% 100%;
     background-color: transparent;
     box-shadow: none;
@@ -456,20 +536,28 @@ h3 {
     padding-bottom: 50%;
     margin-bottom: 0%;
 }
-#q5a_lable { background-image: url(../img/q5a.svg) !important; }
-#q5a_lable span {display: inline-block; transform: rotate(-5deg);}
-#q5b_lable { background-image: url(../img/q5b.svg) !important; }
-#q5b_lable span {display: inline-block; transform: rotate(-15deg); padding-right: 20%;}
-#q5c_lable { background-image: url(../img/q5c.svg) !important; }
-#q5c_lable span {display: inline-block; transform: rotate(15deg);}
-#q5d_lable { background-image: url(../img/q5d_d.svg) !important; }
+#q4_1_lable { background-image: url(../img/q5a.svg); }
+#q4_1_lable span {display: inline-block; transform: rotate(-5deg);}
+#q4_2_lable { background-image: url(../img/q5b.svg); }
+#q4_3_lable span {display: inline-block; transform: rotate(-15deg); padding-right: 20%;}
+#q4_3_lable { background-image: url(../img/q5c.svg); }
+#q4_4_lable span {display: inline-block; transform: rotate(15deg);}
+#q4_4_lable { background-image: url(../img/q5d.svg); }
 
-/* Hide radio buttons */
-input[type="radio"] {
-    display: none;
+.custom-checkbox2 input[id="question_4_1"].selected + label {
+    background-image: url(../img/q5a_d.svg) !important; 
+}
+.custom-checkbox2 input[id="question_4_2"].selected + label {
+    background-image: url(../img/q5b_d.svg) !important; 
+}
+.custom-checkbox2 input[id="question_4_3"].selected + label {
+    background-image: url(../img/q5c_d.svg) !important; 
+}
+.custom-checkbox2 input[id="question_4_4"].selected + label {
+    background-image: url(../img/q5d_d.svg) !important; 
 }
 
-/* Style labels to be selectable and show the selected state */
+
 input[type="radio"] + label {
     cursor: pointer;
     padding: 10px;

@@ -104,16 +104,20 @@
                     <div class="container mt-3 mb-3">
                         <div class="row justify-content-center">
                             <div class="col-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q3" value="Metallic Tones" id="q3a">
-                                    <label class="form-check-label q3-btn" for="q3a">- 對象 -</label>
+                                <div class="custom-dropdown">
+                                    <select id="question_1">
+                                        <option value="">- 對象 -</option>
+                                        <option value="兄弟">兄弟</option>
+                                        <option value="朋友">朋友</option>
+                                        <option value="情人">情人</option>
+                                        <option value="家人">家人</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q3" value="Mauve" id="q3b">
-                                    <label class="form-check-label q3-btn" for="q3b">你都如何稱呼他/她？</label>
-                                </div>
+                                <form action="">
+                                    <input class="" type="text" name="question_2" id="question_2" placeholder="你都如何稱呼他/她？">
+                                </form>
                             </div>
                         </div>
                         <button id="q4-btn" class="next-btn mt-5 mb-3">選好了&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
@@ -135,28 +139,28 @@
                     </div>
                     <div class="container mt-3 mb-3">
                         <div class="row justify-content-center">
-                            <div class="col-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q4" value="Earily Morning" id="q4a">
-                                    <label class="form-check-label q4-btn" id="q4a_lable" for="q4a">我花太少時間陪你們..</label>
+                            <div class="col-12">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" class="question_3" id="question_3_1" value="我花太少時間陪你們..">
+                                    <label for="question_3_1" id="q3_1_lable">我花太少時間陪你們...</label>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q4" value="Morning" id="q4b">
-                                    <label class="form-check-label q4-btn" id="q4b_lable" for="q4b">謝謝你為家庭付出的一切...</label>
+                            <div class="col-12">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" class="question_3" id="question_3_2" value="謝謝你為家庭付出的一切...">
+                                    <label for="question_3_2" id="q3_2_lable">謝謝你為家庭付出的一切...</label>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q4" value="Noon" id="q4c">
-                                    <label class="form-check-label q4-btn" id="q4c_lable" for="q4c">謝謝你總是無條件支持我...</label>
+                            <div class="col-12">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" class="question_3" id="question_3_3" value="謝謝你總是無條件支持我...">
+                                    <label for="question_3_3" id="q3_3_lable">謝謝你總是無條件支持我...</label>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q4" value="Afternoon" id="q4d">
-                                    <label class="form-check-label q4-btn" id="q4d_lable" for="q4d">我真的好愛你們...</label>
+                            <div class="col-12">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" class="question_3" id="question_3_4" value="我真的好愛你們...">
+                                    <label for="question_3_4" id="q3_4_lable">我真的好愛你們...</label>
                                 </div>
                             </div>
                         </div>
@@ -180,27 +184,27 @@
                     <div class="container mt-3 mb-3">
                         <div class="row justify-content-center">
                             <div class="col-6 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q5" value="Earily Morning" id="q5a">
-                                    <label class="form-check-label q5-btn" id="q5a_lable" for="q4a"><span>真摯</span></label>
+                                <div class="custom-checkbox2">
+                                    <input type="checkbox" class="question_4" id="question_4_1" value="真摯">
+                                    <label for="question_4_1" id="q4_1_lable"><span>真摯</span></label>
                                 </div>
                             </div>
                             <div class="col-6 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q5" value="Morning" id="q5b">
-                                    <label class="form-check-label q5-btn" id="q5b_lable" for="q4b"><span>感激</span></label>
+                                <div class="custom-checkbox2">
+                                    <input type="checkbox" class="question_4" id="question_4_2" value="感激">
+                                    <label for="question_4_2" id="q4_2_lable"><span>感激</span></label>
                                 </div>
                             </div>
                             <div class="col-6 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q5" value="Noon" id="q5c">
-                                    <label class="form-check-label q5-btn" id="q5c_lable" for="q4c"><span>溫暖</span></label>
+                                <div class="custom-checkbox2">
+                                    <input type="checkbox" class="question_4" id="question_4_3" value="溫暖">
+                                    <label for="question_4_3" id="q4_3_lable"><span>溫暖</span></label>
                                 </div>
                             </div>
                             <div class="col-6 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q5" value="Afternoon" id="q5d">
-                                    <label class="form-check-label q5-btn" id="q5d_lable" for="q4d"><span>深情</span></label>
+                                <div class="custom-checkbox2">
+                                    <input type="checkbox" class="question_4" id="question_4_4" value="深情">
+                                    <label for="question_4_4" id="q4_4_lable"><span>深情</span></label>
                                 </div>
                             </div>
                         </div>
@@ -223,21 +227,29 @@
                     <div class="container mt-3 mb-5">
                         <div class="row justify-content-center">
                             <div class="col-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q3" value="Metallic Tones" id="q3a">
-                                    <label class="form-check-label q3-btn" for="q3a">如何稱呼你</label>
+                                <form action="">
+                                    <input class="" type="text" name="question_5" id="question_5" placeholder="如何稱呼你？">
+                                </form>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="custom-dropdown">
+                                    <select id="question_6">
+                                        <option value="">- 年齡 -</option>
+                                        <option value="18歲以下">18歲以下</option>
+                                        <option value="18-30歲">18-30歲</option>
+                                        <option value="31-44歲">31-44歲</option>
+                                        <option value="44-64歲">44-64歲</option>
+                                        <option value="65歲以上">65歲以上</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q3" value="Mauve" id="q3b">
-                                    <label class="form-check-label q3-btn" for="q3b">- 年齡 -</label>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="q3" value="Mauve" id="q3b">
-                                    <label class="form-check-label q3-btn" for="q3b"> - 性別 -</label>
+                                <div class="custom-dropdown">
+                                    <select id="question_7">
+                                        <option value="">- 性別 -</option>
+                                        <option value="生理男性">生理男性</option>
+                                        <option value="生理女性">生理女性</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -451,7 +463,7 @@
         </div>
     </div>
     <script>
-        const initView = document.getElementById('view-1')
+        const initView = document.getElementById('view-8')
         initView.classList.remove('hidden');
 
         const imageUrl = 'https://www.nb9060futureplan.com/';
@@ -492,6 +504,89 @@
         var q2Btns = document.getElementsByClassName("q2-btn");
         var q3Btns = document.getElementsByClassName("q3-btn");
         var q4Btns = document.getElementsByClassName("q4-btn");
+
+        const question1 = document.getElementById("question_1");
+        let question1_value = "朋友";
+
+        question1.addEventListener("change", function () {
+            question1_value = question1.value;
+        });
+
+        const question2 = document.getElementById("question_2");
+        let question2_value = "";
+        question2.addEventListener("input", function() {
+            question2_value = question2.value;
+        });
+
+        const question3s = document.querySelectorAll('.question_3');
+        let selectedCount = 0;
+        let question3_value = "";
+
+        question3s.forEach(question3 => {
+            question3.addEventListener("change", function() {
+                if (this.checked) {
+                    if (selectedCount >= 2) {
+                        this.checked = false;
+                    } else {
+                        selectedCount++;
+
+                        if (this.checked) {
+                            this.classList.add("selected");
+                            question3_value = Array.from(question3s)
+                                .filter(checkbox => checkbox.checked)
+                                .map(checkbox => checkbox.value);
+                        } else {
+                            question3_value = "";
+                        }
+                    }
+                } else {
+                    selectedCount--;
+                    this.classList.remove("selected");
+                }
+            });
+        });
+        const question4s = document.querySelectorAll('.question_4');
+        let selectedCount4 = 0;
+        let question4_value = "";
+
+        question4s.forEach(question4 => {
+            question4.addEventListener("change", function() {
+                if (this.checked) {
+                    if (selectedCount4 >= 1) {
+                        this.checked = false;
+                    } else {
+                        selectedCount4++;
+
+                        if (this.checked) {
+                            this.classList.add("selected");
+                            question4_value = Array.from(question4s)
+                                .filter(checkbox => checkbox.checked)
+                                .map(checkbox => checkbox.value);
+                        } else {
+                            question4_value = "";
+                        }
+                    }
+                } else {
+                    selectedCount4--;
+                    this.classList.remove("selected");
+                }
+            });
+        });
+        const question5 = document.getElementById("question_5");
+        let question5_value = "";
+        question5.addEventListener("input", function() {
+            question5_value = question5.value;
+        });
+        const question6 = document.getElementById("question_6");
+        let question6_value = "18-30歲";
+        question6.addEventListener("input", function() {
+            question6_value = question6.value;
+        });
+        const question7 = document.getElementById("question_7");
+        let question7_value = "18-30歲";
+        question7.addEventListener("input", function() {
+            question7_value = question7.value;
+        });
 
         const getData = async (url) => {
             try {
