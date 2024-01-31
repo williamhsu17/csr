@@ -35,7 +35,7 @@
                             <img class="" id="mic-image" src="img/mic.svg" alt="">
                             <div class="col bot-group align-self-end">
                                 <button id="start-btn" class="mt-1 mb-3">開始</button>
-                                <p class="disclaimer mt-2" style="">進入頁面即同意<button class="btn disclaimer p-0" id="disclaimer_link_" style="animation: fadeIn 1s ease-in forwards; text-decoration: underline;">相關條款聲明</button></p>
+                                <p class="disclaimer mt-2" style="">進入頁面即代表同意 <button class="btn disclaimer p-0" id="disclaimer_link_" style="animation: fadeIn 1s ease-in forwards; text-decoration: underline;">相關條款聲明</button></p>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                             </div>
                             <img class="" id="mic-image-2" src="img/mic.svg" alt="">
                         </div>
-                        <button id="q1-btn" class="mt-5 mb-3">next</button>
+                        <!-- <button id="q1-btn" class="mt-5 mb-3">next</button> -->
                     </div>
                     <div class="ball-3"></div>
                 </div>
@@ -70,7 +70,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="q2-btn" class="mt-5 mb-3">next</button>
+                        <!-- <button id="q2-btn" class="mt-5 mb-3">next</button> -->
                     </div>
                     <div class="ball-4"></div>
                     <div class="ball-5"></div>
@@ -85,7 +85,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="q3-btn" class="mt-5 mb-3">next</button>
+                        <!-- <button id="q3-btn" class="mt-5 mb-3">next</button> -->
                     </div>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
@@ -120,7 +120,7 @@
                                 </form>
                             </div>
                         </div>
-                        <button id="q4-btn" class="next-btn mt-5 mb-3">選好了&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+                        <button id="q4-btn" class="next-btn mt-5 mb-3" disabled>選好了&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
                     </div>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
@@ -164,7 +164,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="q5-btn" class="next-btn mt-5 mb-3">下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+                        <button id="q5-btn" class="next-btn mt-5 mb-3" disabled>下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
                     </div>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
@@ -208,7 +208,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="q6-btn" class="next-btn mt-5 mb-3">下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+                        <button id="q6-btn" class="next-btn mt-5 mb-3" disabled>下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
                     </div>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
@@ -254,7 +254,7 @@
                             </div>
                         </div>
                         
-                        <button id="q7-btn" class="next-btn mt-5 mb-3">下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+                        <button id="q7-btn" class="next-btn mt-5 mb-3" disabled>下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
                     </div>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
@@ -467,7 +467,7 @@
         </div>
     </div>
     <script>
-        const initView = document.getElementById('view-1')
+        const initView = document.getElementById('view-5')
         initView.classList.remove('hidden');
 
         const imageUrl = 'https://www.nb9060futureplan.com/';
@@ -479,9 +479,6 @@
         const startBtn = document.getElementById('start-btn');
         const startBuildingBtn = document.getElementById('start-building-btn');
 
-        const q1Btn = document.getElementById('q1-btn');
-        const q2Btn = document.getElementById('q2-btn');
-        const q3Btn = document.getElementById('q3-btn');
         const q4Btn = document.getElementById('q4-btn');
         const q5Btn = document.getElementById('q5-btn');
         const q6Btn = document.getElementById('q6-btn');
@@ -509,24 +506,55 @@
         var q2Btns = document.getElementsByClassName("q2-btn");
         var q3Btns = document.getElementsByClassName("q3-btn");
         var q4Btns = document.getElementsByClassName("q4-btn");
-
+        
         const question1 = document.getElementById("question_1");
-        let question1_value = "朋友";
-
-        question1.addEventListener("change", function () {
-            question1_value = question1.value;
-        });
-
+        let question1_value = "";
         const question2 = document.getElementById("question_2");
         let question2_value = "";
-        question2.addEventListener("input", function() {
-            question2_value = question2.value;
-        });
-
         const question3s = document.querySelectorAll('.question_3');
         let selectedCount = 0;
         let question3_value = "";
+        const question4s = document.querySelectorAll('.question_4');
+        let selectedCount4 = 0;
+        let question4_value = "";
+        const question5 = document.getElementById("question_5");
+        let question5_value = "";
+        const question6 = document.getElementById("question_6");
+        let question6_value = "";
+        const question7 = document.getElementById("question_7");
+        let question7_value = "";
 
+        function checkQuestionValue() {
+            if (question1_value !== "" && question2_value !== "") {
+                q4Btn.disabled = false;
+            } else {
+                q4Btn.disabled = true;
+            }
+            if (question3_value !== "") {
+                q5Btn.disabled = false;
+            } else {
+                q5Btn.disabled = true;
+            }
+            if (question4_value !== "") {
+                q6Btn.disabled = false;
+            } else {
+                q6Btn.disabled = true;
+            }
+            if (question7_value !== "" && question6_value !== "" && question6_value !== "") {
+                q7Btn.disabled = false;
+            } else {
+                q7Btn.disabled = true;
+            }
+        }
+
+        question1.addEventListener("change", function () {
+            question1_value = question1.value;
+            checkQuestionValue();
+        });
+        question2.addEventListener("input", function() {
+            question2_value = question2.value;
+            checkQuestionValue();
+        });
         question3s.forEach(question3 => {
             question3.addEventListener("change", function() {
                 if (this.checked) {
@@ -548,12 +576,9 @@
                     selectedCount--;
                     this.classList.remove("selected");
                 }
+                checkQuestionValue();
             });
         });
-        const question4s = document.querySelectorAll('.question_4');
-        let selectedCount4 = 0;
-        let question4_value = "";
-
         question4s.forEach(question4 => {
             question4.addEventListener("change", function() {
                 if (this.checked) {
@@ -573,22 +598,20 @@
                     selectedCount4--;
                     this.classList.remove("selected");
                 }
+                checkQuestionValue();
             });
         });
-        const question5 = document.getElementById("question_5");
-        let question5_value = "";
         question5.addEventListener("input", function() {
             question5_value = question5.value;
+            checkQuestionValue();
         });
-        const question6 = document.getElementById("question_6");
-        let question6_value = "18-30歲";
         question6.addEventListener("input", function() {
             question6_value = question6.value;
+            checkQuestionValue();
         });
-        const question7 = document.getElementById("question_7");
-        let question7_value = "18-30歲";
         question7.addEventListener("input", function() {
             question7_value = question7.value;
+            checkQuestionValue();
         });
 
         const getData = async (url, data) => {
@@ -620,17 +643,17 @@
 
         startBtn.addEventListener('click', () => {
             navigateToView(1);
+            setTimeout(function() {
+                navigateToView(2);
+            }, 5000);
+            setTimeout(function() {
+                navigateToView(3);
+            }, 10000);
+            setTimeout(function() {
+                navigateToView(4);
+            }, 15000);
         });
 
-        q1Btn.addEventListener('click', () => {
-            navigateToView(2);
-        });
-        q2Btn.addEventListener('click', () => {
-            navigateToView(3);
-        });
-        q3Btn.addEventListener('click', () => {
-            navigateToView(4);
-        });
         q4Btn.addEventListener('click', () => {
             navigateToView(5);
         });
