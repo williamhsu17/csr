@@ -307,7 +307,7 @@
                         <div class="row" style="height: 60vh;">
                             <div class="title-box mt-5">
                                 <div class="" style="margin-top: 76%;">
-                                    <img src="img/context_generating.svg" style="width: 100%;" alt="">
+                                    <img src="img/context_generating.gif" style="width: 100%;" alt="">
                                     <p class="mb-1 mt-5" style="font-size: 1em;">情感醞釀中，請稍候...</p>
                                 </div>
                             </div>
@@ -415,7 +415,7 @@
                         <div class="row" style="height: 60vh;">
                             <div class="title-box mt-5">
                                 <div class="" style="margin-top: 40%; position: relative;">
-                                    <img src="img/sound_wave_circle.svg" style="width: 90%; position: absolute; top: 0; left: 5%;" alt="">
+                                    <img src="img/sound_wave_circle.gif" style="width: 90%; position: absolute; top: 0; left: 5%;" alt="">
                                     <p class="" style="font-size: 1em;   position: absolute;
                                     left: 0;
                                     right: 0;
@@ -429,7 +429,7 @@
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
                     <footer class="fixed-bottom">
-                        <button id="q12-btn" class="mt-5 mb-3">next</button>
+                        <!-- <button id="q12-btn" class="mt-5 mb-3">next</button> -->
                     </footer>
                 </div>
                 <div id="view-14" class="view hidden">
@@ -535,7 +535,7 @@
         const q9_2Btn = document.getElementById('q9-2-btn');
         const q10Btn = document.getElementById('q10-btn');
         const q11Btn = document.getElementById('q11-btn');
-        const q12Btn = document.getElementById('q12-btn');
+        // const q12Btn = document.getElementById('q12-btn');
         const q13Btn = document.getElementById('q13-btn');
         const q14Btn = document.getElementById('q14-btn');
 
@@ -738,16 +738,22 @@
         });
         q9_2Btn.addEventListener('click', () => {
             navigateToView(12);
+            setTimeout(function() {
+                navigateToView(13);
+            }, 20000);
         });
         q10Btn.addEventListener('click', () => {
             navigateToView(11);
         });
         q11Btn.addEventListener('click', () => {
             navigateToView(12);
+            setTimeout(function() {
+                navigateToView(13);
+            }, 20000);
         });
-        q12Btn.addEventListener('click', () => {
-            navigateToView(13);
-        });
+        // q12Btn.addEventListener('click', () => {
+        //     navigateToView(13);
+        // });
         q13Btn.addEventListener('click', () => {
             navigateToView(14);
         });
