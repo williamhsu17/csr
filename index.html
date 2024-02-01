@@ -111,7 +111,7 @@
                                 <div class="custom-dropdown">
                                     <select id="question_1">
                                         <option value="">- 對象 -</option>
-                                        <option value="兄弟">兄弟</option>
+                                        <option value="子女">子女</option>
                                         <option value="朋友">朋友</option>
                                         <option value="情人">情人</option>
                                         <option value="家人">家人</option>
@@ -141,7 +141,7 @@
                             <div class="title-box mt-5">
                                 <div class="">
                                     <p class="mb-1 mt-5" style="font-size: 1.2em;">難得鼓起勇氣</p>
-                                    <p class="" style="font-size: 1.2em;">你想對家人說些什麼呢？</p>
+                                    <p class="" style="font-size: 1.2em;">你想對<span id="dv_1">家人</span>說些什麼呢？</p>
                                     <p class="boxed-text" style="font-size: 0.8em;">請選擇至多2句想講的話</p>
                                 </div>
                             </div>
@@ -555,6 +555,7 @@
         var q4Btns = document.getElementsByClassName("q4-btn");
         
         const question1 = document.getElementById("question_1");
+        const dv1 = document.getElementById("dv_1");
         let question1_value = "";
         const question2 = document.getElementById("question_2");
         let question2_value = "";
@@ -596,6 +597,7 @@
 
         question1.addEventListener("change", function () {
             question1_value = question1.value;
+            dv1.textContent = question1_value;
             checkQuestionValue();
         });
         question2.addEventListener("input", function() {
