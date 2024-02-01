@@ -455,10 +455,10 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <button id="inviteButton" class="next-btn mt-3 py-1" style="width: 100%; height: 100%;">邀請朋友<br>一起玩</button>
+                                <button id="inviteButton" class="" style="width: 100%; height: 100%;">邀請朋友<br>一起玩</button>
                             </div>
                             <div class="col-6">
-                                <button id="" class="next-btn mt-3 py-1" style="width: 100%; height: 100%;">分享給<br>他/她</button>
+                                <button id="shareButton" class="" style="width: 100%; height: 100%;">分享給<br>他/她</button>
                             </div>
                             <div class="col-12 mt-3">
                                 <button id="q13-btn" class=" mt-3 invisible_btn"><img src="img/result_watch_more.svg" style="width: 12%; height: auto;" alt=""></button>
@@ -846,7 +846,7 @@
             }
         });
         document.getElementById("inviteButton").addEventListener("click", function() {
-            // Check if the navigator object has a share method (for modern browsers)
+            console.log('invite')
             if (navigator.share) {
                 navigator.share({
                     title: 'Share Example',
@@ -858,7 +858,6 @@
                     console.error('Error sharing:', error);
                 });
             } else {
-                // Fallback for browsers that don't support the share API
                 alert('Sharing is not supported on this browser. You can manually copy the URL.');
             }
         });
