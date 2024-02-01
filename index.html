@@ -33,10 +33,14 @@
                                 <span style="font-size: 1.2em; letter-spacing: 5px;">讓AI替你說愛</span>
                             </div>
                             <img class="" id="mic-image" src="img/mic.svg" alt="">
-                            <div class="col bot-group align-self-end">
-                                <button id="start-btn" class="mt-1 mb-3">開始</button>
-                                <p class="disclaimer mt-2" style="">進入頁面即代表同意 <button class="btn disclaimer p-0" id="disclaimer_link_" style="animation: fadeIn 1s ease-in forwards; text-decoration: underline;">相關條款聲明</button></p>
-                            </div>
+                            <footer class="fixed-bottom mb-3">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <button id="start-btn" class="mt-1">開始</button>
+                                        <p class="disclaimer mt-2">進入頁面即代表同意 <button class="btn disclaimer p-0" id="disclaimer_link_" style="animation: fadeIn 1s ease-in forwards; text-decoration: underline;">相關條款聲明</button></p>
+                                    </div>
+                                </div>
+                            </footer>
                         </div>
                     </div>
                     <div class="ball-1"></div>
@@ -120,8 +124,14 @@
                                 </form>
                             </div>
                         </div>
-                        <button id="q4-btn" class="next-btn mt-5 mb-3" disabled>選好了&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
                     </div>
+                    <footer class="fixed-bottom mb-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <button id="q4-btn" class="next-btn mt-5 mb-3" disabled>選好了&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+                            </div>
+                        </div>
+                    </footer>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
                 </div>
@@ -164,8 +174,19 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="q5-btn" class="next-btn mt-5 mb-3" disabled>下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
                     </div>
+                    <footer class="fixed-bottom mb-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button id="q5-btn-back" class="next-btn next-btn-6 mt-5 mb-3">返回></button>
+                                </div>
+                                <div class="col-6">
+                                    <button id="q5-btn" class="next-btn next-btn-6 mt-5 mb-3" disabled>下一步&nbsp;&nbsp;></button>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
                 </div>
@@ -208,8 +229,19 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="q6-btn" class="next-btn mt-5 mb-3" disabled>下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
                     </div>
+                    <footer class="fixed-bottom mb-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button id="q6-btn-back" class="next-btn next-btn-6 mt-5 mb-3">返回></button>
+                                </div>
+                                <div class="col-6">
+                                    <button id="q6-btn" class="next-btn next-btn-6 mt-5 mb-3" disabled>下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
                 </div>
@@ -254,8 +286,19 @@
                             </div>
                         </div>
                         
-                        <button id="q7-btn" class="next-btn mt-5 mb-3" disabled>下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
                     </div>
+                    <footer class="fixed-bottom mb-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button id="q7-btn-back" class="next-btn next-btn-6 mt-5 mb-3">返回></button>
+                                </div>
+                                <div class="col-6">
+                                    <button id="q7-btn" class="next-btn next-btn-6 mt-5 mb-3" disabled>下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
                 </div>
@@ -269,7 +312,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button id="q8-btn" class="mt-5 mb-3">next</button>
+                        <!-- <button id="q8-btn" class="mt-5 mb-3">next</button> -->
                     </div>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
@@ -412,7 +455,7 @@
                         </div>
                         <div class="row">
                             <div class="col-6">
-                                <button id="" class="next-btn mt-3 py-1" style="width: 100%; height: 100%;">邀請朋友<br>一起玩</button>
+                                <button id="inviteButton" class="next-btn mt-3 py-1" style="width: 100%; height: 100%;">邀請朋友<br>一起玩</button>
                             </div>
                             <div class="col-6">
                                 <button id="" class="next-btn mt-3 py-1" style="width: 100%; height: 100%;">分享給<br>他/她</button>
@@ -467,6 +510,7 @@
         </div>
     </div>
     <script>
+        // initpage
         const initView = document.getElementById('view-1')
         initView.classList.remove('hidden');
 
@@ -483,7 +527,10 @@
         const q5Btn = document.getElementById('q5-btn');
         const q6Btn = document.getElementById('q6-btn');
         const q7Btn = document.getElementById('q7-btn');
-        const q8Btn = document.getElementById('q8-btn');
+        const q5BtnBack = document.getElementById('q5-btn-back');
+        const q6BtnBack = document.getElementById('q6-btn-back');
+        const q7BtnBack = document.getElementById('q7-btn-back');
+        // const q8Btn = document.getElementById('q8-btn');
         const q9_1Btn = document.getElementById('q9-1-btn');
         const q9_2Btn = document.getElementById('q9-2-btn');
         const q10Btn = document.getElementById('q10-btn');
@@ -666,10 +713,24 @@
         q7Btn.addEventListener('click', () => {
             handleResults();
             navigateToView(8);
+            setTimeout(function() {
+                navigateToView(9);
+            }, 20000);
         });
-        q8Btn.addEventListener('click', () => {
-            navigateToView(9);
+
+        q5BtnBack.addEventListener('click', () => {
+            navigateToView(4);
         });
+        q6BtnBack.addEventListener('click', () => {
+            navigateToView(5);
+        });
+        q7BtnBack.addEventListener('click', () => {
+            navigateToView(6);
+        });
+
+        // q8Btn.addEventListener('click', () => {
+        //     navigateToView(9);
+        // });
         q9_1Btn.addEventListener('click', () => {
             navigateToView(10);
         });
@@ -782,6 +843,23 @@
             } else {
                 audio.pause();
                 audio.currentTime = 0;
+            }
+        });
+        document.getElementById("inviteButton").addEventListener("click", function() {
+            // Check if the navigator object has a share method (for modern browsers)
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Share Example',
+                    text: 'Check out this website!',
+                    url: window.location.href
+                }).then(function() {
+                    console.log('Shared successfully');
+                }).catch(function(error) {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                // Fallback for browsers that don't support the share API
+                alert('Sharing is not supported on this browser. You can manually copy the URL.');
             }
         });
     </script>
