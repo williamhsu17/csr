@@ -345,10 +345,10 @@
                 </div>
                 <div id="view-11" class="view hidden">
                     <div class="container-fluid">
-                        <div class="row" style="height: 24vh;">
-                            <div class="title-box mt-5">
+                        <div class="row" style="height: 16vh;">
+                            <div class="title-box">
                                 <div class="">
-                                    <p class="mb-4 mt-4" style="font-size: 1.4em;">[ 愛的宣言 ]</p>
+                                    <p class="mt-3" style="font-size: 1.4em;">[ 愛的宣言 ]</p>
                                     <p class="boxed-text" style="font-size: 0.8em; width: 80%;">請按下按鈕錄音，開始念誦以下文字</p>
                                 </div>
                             </div>
@@ -370,17 +370,17 @@
                                 <p class="mb-5">在時間的消逝中永存。</p>
                             </div>
                         </div>
-                        <button id="q10-btn" class="record_icon"><img src="img/Record_Icon.svg" alt=""></button>
+                        <button id="recordButton" class="record_icon"><img src="img/Record_Icon.svg" alt=""></button>
                     </div>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
                 </div>
                 <div id="view-12" class="view hidden">
                     <div class="container-fluid">
-                        <div class="row" style="height: 24vh;">
-                            <div class="title-box mt-5">
+                        <div class="row" style="height: 16vh;">
+                            <div class="title-box mt-3">
                                 <div class="">
-                                    <p class="mb-4 mt-4" style="font-size: 1.4em;">[ 愛的宣言 ]</p>
+                                    <p class="mt-3" style="font-size: 1.4em;">[ 愛的宣言 ]</p>
                                 </div>
                             </div>
                         </div>
@@ -403,7 +403,7 @@
                         </div>
                         <div class="row mt-5">
                             <div class="col-6">
-                                <button id="" class="next-btn mt-3" style="width: 80%;">重新採樣</button>
+                                <button id="q11-btn-back" class="next-btn mt-3" style="width: 80%;">重新採樣</button>
                             </div>
                             <div class="col-6">
                                 <button id="q11-btn" class="next-btn mt-3" style="width: 80%;">完成</button>
@@ -515,9 +515,10 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script>
         // initpage
-        const initView = document.getElementById('view-15')
+        const initView = document.getElementById('view-1')
         initView.classList.remove('hidden');
 
         const imageUrl = 'https://www.nb9060futureplan.com/';
@@ -539,8 +540,9 @@
         // const q8Btn = document.getElementById('q8-btn');
         const q9_1Btn = document.getElementById('q9-1-btn');
         const q9_2Btn = document.getElementById('q9-2-btn');
-        const q10Btn = document.getElementById('q10-btn');
+        // const q10Btn = document.getElementById('q10-btn');
         const q11Btn = document.getElementById('q11-btn');
+        const q11BtnBack = document.getElementById('q11-btn-back');
         // const q12Btn = document.getElementById('q12-btn');
         const q13Btn = document.getElementById('q13-btn');
         const q14Btn = document.getElementById('q14-btn');
@@ -804,14 +806,17 @@
                 navigateToView(13);
             }, 20000);
         });
-        q10Btn.addEventListener('click', () => {
-            navigateToView(11);
-        });
+        // q10Btn.addEventListener('click', () => {
+        //     navigateToView(11);
+        // });
         q11Btn.addEventListener('click', () => {
             navigateToView(12);
             setTimeout(function() {
                 navigateToView(13);
             }, 20000);
+        });
+        q11BtnBack.addEventListener('click', () => {
+            navigateToView(10);
         });
         // q12Btn.addEventListener('click', () => {
         //     navigateToView(13);
@@ -946,6 +951,36 @@
             question7_value = "";
             checkQuestionValue();
             navigateToView(4);
+        });
+
+        let mediaRecorder;
+        let audioChunks = [];
+
+        document.getElementById('recordButton').addEventListener('click', () => {
+            if (mediaRecorder && mediaRecorder.state === "recording") {
+                mediaRecorder.stop();
+                navigateToView(11)
+                
+            } else {
+                navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+                    .then(stream => {
+                        mediaRecorder = new MediaRecorder(stream);
+                        audioChunks = [];
+
+                        mediaRecorder.ondataavailable = event => {
+                            audioChunks.push(event.data);
+                        };
+
+                        mediaRecorder.start();
+                        // document.getElementById('recordButton').textContent = 'Stop Recording';
+                        // document.getElementById('downloadButton').disabled = true;
+                    })
+                    .catch(error => console.error("Permission denied or error:", error));
+            }
+        });
+        document.getElementById('shareButton').addEventListener('click', () => {
+            const audioBlob = new Blob(audioChunks, { type: 'audio/mp4' });
+            saveAs(audioBlob, "recording.mp4");
         });
     </script>
 </body>
