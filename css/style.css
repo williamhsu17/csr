@@ -18,6 +18,7 @@ body {
     -ms-overflow-style: none;
 }
 h1, p, span, button {
+    font-weight: 700;
     font-family: 'Noto Serif TC', serif;
 }
 h1 {
