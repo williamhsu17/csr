@@ -230,9 +230,9 @@ h3 {
     margin: 0 auto;
 }
 #mic-image-3 {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
-    margin-top: -80%;
+    margin-top: -60%;
 }
 /* For desktop devices */
 @media only screen and (min-width: 768px) {
@@ -381,7 +381,7 @@ h3 {
     padding-bottom: 90%;
     border-radius: 50%;
     margin: 0 auto;
-    margin-top: 40%;
+    margin-top: 24%;
     border-radius: 100%;
     /* box-shadow: 0 0 20px 0 rgba(0,0,0,0.25); */
 }
