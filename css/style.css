@@ -11,7 +11,8 @@ body {
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
     background-color: #E4DBDE;
-    font-family: 'Proxima', sans-serif;
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
     overflow: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
