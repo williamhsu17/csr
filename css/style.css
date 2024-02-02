@@ -641,14 +641,24 @@ input[type="radio"]:checked + label {
     border-radius: 5%;
 }
 #recordButton {
+    margin: 0 auto;
     margin-top: 10%;
     width: 100px;
-    height: auto;
-    background-color: transparent;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #FF8845;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
+    cursor: pointer;
+}
+#recordButton img {
+    width: 50px;
+    height: auto;    
 }
 .notRec{
-	background-color: darkred;
+	background-color: white;
 }
 
 .Rec{
@@ -660,13 +670,13 @@ input[type="radio"]:checked + label {
 
 @keyframes pulse{
 	0%{
-		box-shadow: 0px 0px 5px 0px rgba(173,0,0,.3);
+		box-shadow: 0px 0px 5px 0px rgba(255,255,255,.3);
 	}
 	65%{
-		box-shadow: 0px 0px 5px 13px rgba(173,0,0,.3);
+		box-shadow: 0px 0px 5px 13px rgba(255,255,255,.3);
 	}
 	90%{
-		box-shadow: 0px 0px 5px 13px rgba(173,0,0,0);
+		box-shadow: 0px 0px 5px 13px rgba(255,255,255,0);
 	}
 }
 /* For large desktop devices */
