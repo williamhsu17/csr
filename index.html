@@ -370,7 +370,7 @@
                                 <p class="mb-5">在時間的消逝中永存。</p>
                             </div>
                         </div>
-                        <button id="recordButton" class="record_icon"><img src="img/Record_Icon.svg" alt=""></button>
+                        <button id="recordButton" class="notRec"><img src="img/Record_Icon.svg" alt=""></button>
                     </div>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
@@ -506,7 +506,7 @@
                         </div>
                     </div>
                     <footer class="fixed-bottom">
-                        <a target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=為愛獻聲，讓愛留存&dates=20240309T120000Z/202400327T130000Z&details=為愛獻聲，讓愛留存&location=taipei">
+                        <a target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=為愛獻聲，讓愛留存&dates=20240309T110000Z/202400327T170000Z&details=為愛獻聲，讓愛留存&location=松菸男澡堂空間">
                             <img src="img/activity.svg" alt="">
                         </a>
                     </footer>
@@ -518,7 +518,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script>
         // initpage
-        const initView = document.getElementById('view-1')
+        const initView = document.getElementById('view-11')
         initView.classList.remove('hidden');
 
         const imageUrl = 'https://www.nb9060futureplan.com/';
@@ -972,6 +972,8 @@
                         };
 
                         mediaRecorder.start();
+                        document.getElementById('recordButton').classList.remove('notRec')
+                        document.getElementById('recordButton').classList.add('Rec')
                         // document.getElementById('recordButton').textContent = 'Stop Recording';
                         // document.getElementById('downloadButton').disabled = true;
                     })
