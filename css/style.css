@@ -10,7 +10,8 @@ body {
     padding: 0;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
-    background-color: #E4DBDE;
+    /* background-color: #E4DBDE; */
+    background: linear-gradient(to bottom, #EEEFEA, #E4DBDE);;
     font-family: 'Noto Serif TC', serif;
     font-weight: 700;
     overflow: hidden;
@@ -25,19 +26,6 @@ h1 {
     color: #3B3B3B;
     font-weight: 700;
     font-size: 2.5em;
-}
-/* For desktop devices */
-@media only screen and (min-width: 768px) {
-    body {
-        background-image: url('../img/start_desktop_full.png');
-    }
-}
-/* For mobile devices */
-@media only screen and (max-width: 767px) {
-    body {
-        background-image: url('../img/start_mobile_full.png');
-        animation: moveBackground 1s forwards;
-    }
 }
 nav {
     background-color: transparent;
