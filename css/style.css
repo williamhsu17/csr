@@ -215,6 +215,11 @@ h3 {
     width: 90%;
     margin: 0 auto;
 }
+#wave-image {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: -20%;
+}
 #mic-image-2 {
     width: 60%;
     margin: 0 auto;
