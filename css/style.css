@@ -632,10 +632,10 @@ input[type="radio"]:checked + label {
 #recordButton {
     margin: 0 auto;
     margin-top: 10%;
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    background-color: #FF8845;
+    background-color: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
