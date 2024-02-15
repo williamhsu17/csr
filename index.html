@@ -518,6 +518,13 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            var isLineBrowser = /line/i.test(userAgent);
+            if (isLineBrowser) {
+            document.getElementById("message").style.display = "block";
+            }
+        };
         // initpage
         const initView = document.getElementById('view-1')
         initView.classList.remove('hidden');
