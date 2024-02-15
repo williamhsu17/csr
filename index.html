@@ -40,7 +40,7 @@
                                 <div class="container-fluid">
                                     <div class="row">
                                         <button id="start-btn" class="mt-1">開始</button>
-                                        <p class="disclaimer mt-2">進入頁面即代表同意 <button class="btn disclaimer p-0" id="disclaimer_link_" style="animation: fadeIn 1s ease-in forwards; text-decoration: underline;">相關條款聲明</button></p>
+                                        <p class="disclaimer mt-2">進入頁面即代表同意 <button class="btn disclaimer p-0" id="disclaimer_link" style="text-decoration: underline;">相關條款聲明</button></p>
                                     </div>
                                 </div>
                             </footer>
@@ -513,18 +513,75 @@
                     </footer>
                     <div class="ball-3"></div>
                 </div>
+                <div id="view-16" class="view hidden" style="background-color: #3B3B3B;">
+                    <div class="container-fluid" style="height: 100%;">
+                        <div class="row">
+                            <div class="col d-flex justify-content-end">
+                                <button class="btn" id="disclaimer_close" style=" color: white;">X</button>
+                            </div>
+                        </div>
+                        <div class="row" style="height: 100%; overflow: auto; scrollbar-width: 0;">
+                            <div class="col-12">
+                                <div class="" style="text-align: left; color: white;">
+                                    <p>本活動之主辦單位：​</p>
+                                    <p>財團法人器官捐贈移植登錄及病人自主推廣中心、陽獅集團(下稱主辦單位)​​</p>
+                                    <p>本活動參與者於參加本活動前應閱讀以下本活動條款：​</p>
+                                    <p>*本活動參與者於參加本活動之同時，即視為已同意接受本活動條款。</p>
+                                    <ol>
+                                        <li>「為愛獻聲，讓AI替你說」活動網站將存取所有本活動參與者參與本活動所生成的成果內容(以下稱本活動生成內容)作為展示。主辦單位就全部本活動生成內容均保有彈性使用權利，恕不另行通知。</li>
+                                        <li>本活動所有相關素材及本活動生成內容，包括但不限於著作（包含著作人格權及著作財產權）、商標、圖形、網頁、程式碼、智慧財產權以及其他權利及利益等，均為主辦單位所有。本活動參與者參與本活動所生成的本活動生成內容並不代表其已取得或被授予上述的任何權利。除另經主辦單位事前書面同意外，本活動參與者或任何第三人均不得以任何方法（無論直接或間接、有償或無償、商用或非商用）逕行使用(包括但不限於重製、改作、散布、出租、發行、公開發表、公開播送、還原工程、解編、反向組譯等)或行使任何屬於主辦單位的權利。</li>
+                                        <li>本活動生成內容經由第三方平台「Open AI ChatGPT」、「ElevenLabs」之AI生成技術產出，如有相關智慧財產權異議與主辦單位無關。主辦單位不對因使用前揭AI生成技術而引起之任何損失、損害、訴訟或其他問題負責，亦不保證前揭技術所協助生成的本活動生成內容能符合本活動參與者之預期結果。</li>
+                                        <li>主辦單位不保證本活動網站功能、及本活動生成內容相關的AI生成技術之風險和不確定性(包括但不限於遭駭客攻擊或盜取、電腦病毒入侵、系統故障、使用者故意或過失、相容性、因政府/法令管制或天災等因素)，亦不對此等風險和不確定性承擔任何義務與責任。</li>
+                                        <li>本活動如因任何電腦、網際網路、各式線路、技術或其他不可歸責於主辦單位或其委託之執行廠商的因素，而致使本活動參與者所填寫、選擇、輸入或產出之資料有延遲、錯誤、無法辨識、遺失、毀損等資料無效之情況，主辦單位及受委託的執行廠商均不負任何法律責任或賠償責任，本活動參與者不得因此異議。</li>
+                                        <li>本活動參與者聲明並保證本活動生成內容不會被用於任何非法活動、違反社會道德、或違反公序良俗之行為(包括但不限於侵害他人法益、侵犯他人隱私、詐欺、詆毀、不當傳銷、販賣非法物品等)，倘因本活動參與者之因素所致的相關爭議一概與主辦單位無涉，概由本活動參與者承擔所有相關的法律責任與完全賠償責任。</li>
+                                        <li>如因本活動參與者未遵守本活動條款而致影響主辦單位或第三方之權益、或使主辦單位或第三方受有任何損害，本活動參與者應自負一切民刑事責任與完全賠償責任。</li>
+                                        <li>主辦單位保留不時審查、補充、解釋、修改、終止、變更以上條款與本活動內容細節之權利，任何關於本活動內容、執行與變更詳情以主辦單位所公布之訊息為準。</li>
+                                        <li>主辦單位有權對本活動所有事宜與爭議作出解釋或裁決。如有任何未盡事宜，均以主辦單位依中華民國法律解釋之。</li>
+                                    </ol>
+                                    <h3>個資蒐集同意聲明</h3>
+                                    <p>為落實個人資料之保護，依照個人資料保護法第8條規定進行蒐集前之告知：</p>
+                                    <p>一、個人資料蒐集之目的及用途：</p>
+                                    <p>目的在於進行活動辦理之相關作業，主辦單位並將利用您所提供之姓名及聲紋特徵等以AI生成技術產出活動內容。</p>
+                                    <p>二、蒐集之個人資料類別：</p>
+                                    <ol>
+                                        <li>中文姓名</li>
+                                        <li>聲紋特徵</li>
+                                        <li>性別</li>
+                                        <li>年齡</li>
+                                        <li>主辦單位因活動需求所需收集之資料，由主辦單位另訂之。</li>
+                                    </ol>
+                                    <p>三、個人資料利用之期間、地區、對象：</p>
+                                    <ol>
+                                        <li>期間：您同意參加活動之日起，至活動結束日起算30日為止。</li>
+                                        <li>期間由主辦單位保存您的個人資料，以作為本人、主辦單位查詢、確認證明及經由第三方平台「Open AI ChatGPT」、「ElevenLabs」之AI生成技術產出內容。</li>
+                                        <li>您的個人資料將用於主辦單位提供服務之地區</li>
+                                        <li>對象：參與本活動並產出生成內容者。</li>
+                                    </ol>
+                                    <p>四、依據個資法第3條規定，報名者對個人資料於保存期限內得行使以下權利：</p>
+                                    <ol>
+                                        <li>查詢或請求閱覽</li>
+                                        <li>請求製給複製本</li>
+                                        <li>請求補充或更正</li>
+                                        <li>請求停止蒐集、處理或利用</li>
+                                        <li>請求刪除</li>
+                                    </ol>
+                                    <p>五、提醒：</p>
+                                    <p>您可自由選擇提供個人資料，若您拒絕提供使用本服務所必須之資料，將可能導致無法使用本服務。</p>
+                                    <p>請問您是否願以電子文件方式同意主辦單位蒐集、處理及利用您的個人資料：</p>
+                                    <p>(請注意，此處點選同意具有個人資料保護法所定之書面同意效果。)</p>
+                                    <p>同意，代表您已閱畢本次活動之個資告知事項，並願以電子文件方式同意主辦單位蒐集、處理及利用您的個人資料。</p>
+                                    <p>不同意，代表您不同意主辦單位於本次活動蒐集、處理及利用您的個人資料，請關閉此頁面。</p>
+                                    <p>若有任何疑問您可洽主辦單位。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script>
-        window.onload = function() {
-            var userAgent = navigator.userAgent.toLowerCase();
-            var isLineBrowser = /line/i.test(userAgent);
-            if (isLineBrowser) {
-            document.getElementById("message").style.display = "block";
-            }
-        };
         // initpage
         const initView = document.getElementById('view-1')
         initView.classList.remove('hidden');
@@ -560,8 +617,8 @@
 
         const btnHome = document.getElementById('btn_home');
 
-        // const disclaimerClose = document.getElementById('disclaimer_close');
-        // const disclaimerLink = document.getElementById('disclaimer_link');
+        const disclaimerClose = document.getElementById('disclaimer_close');
+        const disclaimerLink = document.getElementById('disclaimer_link');
 
         const nbLogoR = document.getElementById('nb-logo-r');
 
@@ -1084,6 +1141,13 @@
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);
+        });
+
+        disclaimerClose.addEventListener('click', () => {
+            navigateToView(0);
+        });
+        disclaimerLink.addEventListener('click', () => {
+            navigateToView(15);
         });
     </script>
 </body>
