@@ -577,6 +577,9 @@
                         </div>
                     </div>
                 </div>
+                <div id="view-17" class="view hidden">
+                    <canvas id="myCanvas" width="640" height="480"></canvas>
+                </div>
             </div>
         </div>
     </div>
@@ -1135,12 +1138,31 @@
         document.getElementById('shareButton').addEventListener('click', () => {
             //const audioBlob = new Blob(audioChunks, { type: 'audio/mp4' });
             //saveAs(audioBlob, "recording.mp4");
-            const a = document.createElement('a');
-            a.href = audioBlobURL;
-            a.download = 'recoding.mp3';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
+            // const a = document.createElement('a');
+            // a.href = audioBlobURL;
+            // a.download = 'recoding.mp4';
+            // document.body.appendChild(a);
+            // a.click();
+            // document.body.removeChild(a);
+            // audio.src = audioBlobURL;
+            let baseUrl = window.location.href.split('?')[0].split('#')[0];
+            if (!baseUrl.endsWith('/')) {
+                baseUrl += '/';
+            }
+
+            if (navigator.share) {
+                navigator.share({
+                    title: '請仔細聆聽，我的聲音',
+                    text: '請仔細聆聽，我的聲音',
+                    url: baseUrl + 'sharepage.html',
+                }).then(function() {
+                    console.log('Shared successfully');
+                }).catch(function(error) {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                alert('Sharing is not supported on this browser. You can manually copy the URL.');
+            }
         });
 
         disclaimerClose.addEventListener('click', () => {
