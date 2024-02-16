@@ -1122,9 +1122,14 @@
             question3_2_input.classList.remove("selected");
             question3_3_input.classList.remove("selected");
             question3_4_input.classList.remove("selected");
+            question3_1_input.checked = false;
+            question3_2_input.checked = false;
+            question3_3_input.checked = false;
+            question3_4_input.checked = false;
             question4_value = "";
             question4s.forEach(question4 => {
                 question4.classList.remove("selected");
+                question4.checked = false;
             });
             question5.value = "";
             question5_value = "";
