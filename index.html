@@ -885,7 +885,18 @@
             };
             console.log(options)
 
-            fetch('https://api.elevenlabs.io/v1/text-to-speech/53LkExHSqrmDrthYTGTK', options)
+            voice_id = 'LcVF1XITRkxZIR6At8Pc'
+
+            if (question7_value === '生理男性') {
+                voice_id = 'LcVF1XITRkxZIR6At8Pc';
+            } else if (question7_value === '生理女性') {
+                voice_id = 'mPz9PxvD3xe6bWZj1zVZ';
+            }
+            else {
+                voice_id = 'LcVF1XITRkxZIR6At8Pc'
+            }
+
+            fetch('https://api.elevenlabs.io/v1/text-to-speech/' + voice_id , options)
             .then(response => response.blob())
             .then(blob => {
                 audioBlobURL = URL.createObjectURL(blob);
@@ -993,6 +1004,8 @@
         //     navigateToView(13);
         // });
         q13Btn.addEventListener('click', () => {
+            const audio = document.getElementById("audio");
+            audio.pause()
             navigateToView(14);
         });
         q14Btn.addEventListener('click', () => {
