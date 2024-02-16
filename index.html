@@ -888,9 +888,29 @@
             voice_id = 'LcVF1XITRkxZIR6At8Pc'
 
             if (question7_value === '生理男性') {
-                voice_id = 'LcVF1XITRkxZIR6At8Pc';
+                if (question6_value === '20歲以下'){
+                    voice_id = 'LcVF1XITRkxZIR6At8Pc';
+                } else if (question6_value === '21-40歲'){
+                    voice_id = 'JeRSMGN72RY0R2nv1bFN';
+                } else if (question6_value === '41-60歲'){
+                    voice_id = 'EkAO4bU7a0qDtxBbKtQQ';
+                } else if (question6_value === '60歲以上'){
+                    voice_id = '8lyxQ3p4Q7RhNdg0Nemz';
+                } else {
+                    voice_id = 'LcVF1XITRkxZIR6At8Pc';
+                }
             } else if (question7_value === '生理女性') {
-                voice_id = 'mPz9PxvD3xe6bWZj1zVZ';
+                if (question6_value === '20歲以下'){
+                    voice_id = 'mPz9PxvD3xe6bWZj1zVZ';
+                } else if (question6_value === '21-40歲'){
+                    voice_id = 'hmRk6IkQCDhCzvopg94o';
+                } else if (question6_value === '41-60歲'){
+                    voice_id = 'vS8NjtShaQVvmpfyxDPw';
+                } else if (question6_value === '60歲以上'){
+                    voice_id = 'KcCJRcQ66VPubI3Aj8yc';
+                } else {
+                    voice_id = 'mPz9PxvD3xe6bWZj1zVZ';
+                }
             }
             else {
                 voice_id = 'LcVF1XITRkxZIR6At8Pc'
