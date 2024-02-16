@@ -300,9 +300,10 @@ h3 {
     border-radius: 50%;
     background: linear-gradient(45deg, #f2efd8, #efc55d, #dd8751);
     filter: blur(30px);
-    position: absolute;
+    /* position: absolute;
     top: 40%;
-    left: 10%;
+    left: 10%; */
+    margin: 0 auto;
     z-index: -1;
     animation-name: rotate;
     animation-duration: 4s;
