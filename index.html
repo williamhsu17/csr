@@ -873,6 +873,7 @@
         });
 
         let audioBlobURL = '';
+        let shareId = 1;
 
         q9_2Btn.addEventListener('click', () => {
             const options = {
@@ -923,33 +924,23 @@
                 const audio = document.getElementById('audio');
                 audio.src = audioBlobURL;
                 
-                
-                // The URL to your upload endpoint
-                const uploadUrl = 'https://csr-voice-upload.william-032.workers.dev/';
-                const authToken = '12345678';
+                const fileName = 'csr.mp3';
+                const audioFile = new File([blob], fileName, { type: 'audio/mp3' });
 
-                try {
-                    const response = fetch(uploadUrl, {
-                        method: 'PUT',
-                        headers: {
-                        'Authorization': authToken,
-                        // Optionally, you can set the Content-Type header
-                        // 'Content-Type': 'multipart/form-data', // Normally, this is not required and should be omitted because the browser will set the Content-Type with the boundary parameter correctly for you.
-                        },
-                        body: blob, // Directly send the file as the body content
-                    });
-                    
-                    if (response.ok) {
-                        console.log('File uploaded successfully');
-                        // Handle successful upload here
-                    } else {
-                        console.error('Upload failed', response.statusText);
-                        // Handle upload failure here
-                    }
-                    } catch (error) {
-                    console.error('Error uploading file:', error);
-                    // Handle errors here
-                }
+                let formData = new FormData();
+                formData.append("voice", audioFile);
+                formData.append("voice_name", "Sample Voice"); // Add other fields as needed
+
+                fetch('https://chatgptdemo.williamhsu.com.tw/images/upload_audio/', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    shareId = data.voice.id;
+                })
+                .catch(error => console.error(error));
             })
             .catch(error => console.error('Error fetching audio:', error));
 
@@ -1002,6 +993,24 @@
                     audioBlobURL = URL.createObjectURL(blob);
                     const audio = document.getElementById('audio');
                     audio.src = audioBlobURL;
+
+                    const fileName = 'csr.mp3';
+                    const audioFile = new File([blob], fileName, { type: 'audio/mp3' });
+
+                    let formData = new FormData();
+                    formData.append("voice", audioFile);
+                    formData.append("voice_name", "Sample Voice"); // Add other fields as needed
+
+                    fetch('https://chatgptdemo.williamhsu.com.tw/images/upload_audio/', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        shareId = data.voice.id;
+                    })
+                    .catch(error => console.error(error));
                 })
                 .catch(error => console.error('Error fetching audio:', error));
 
@@ -1230,7 +1239,7 @@
                 navigator.share({
                     title: '請仔細聆聽，我的聲音',
                     text: '請仔細聆聽，我的聲音',
-                    url: baseUrl + 'share.html',
+                    url: baseUrl + 'share.html' + '?voice=' + shareId,
                 }).then(function() {
                     console.log('Shared successfully');
                 }).catch(function(error) {
