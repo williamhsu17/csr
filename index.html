@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row mt-0">
             <div id="app" class="mx-0 px-0">
-                <div id="view-1" class="view">
+                <div id="view-1" class="view hidden">
                     <div class="container-fluid">
                         <div class="row" style="height: 86vh;">
                             <div class="title-box mt-5 pt-3" style="z-index: 1040;">
@@ -271,10 +271,11 @@
                                 <div class="custom-dropdown">
                                     <select id="question_6">
                                         <option value="">- 年齡 -</option>
-                                        <option value="20歲以下">20歲以下</option>
-                                        <option value="21-40歲">21-40歲</option>
-                                        <option value="41-60歲">41-60歲</option>
-                                        <option value="60歲以上">60歲以上</option>
+                                        <option value="19歲以下">19歲以下</option>
+                                        <option value="20-29歲">20-29歲</option>
+                                        <option value="30-39歲">30-39歲</option>
+                                        <option value="40-49歲">40-49歲</option>
+                                        <option value="50歲以上">50歲以上</option>
                                     </select>
                                 </div>
                             </div>
@@ -344,7 +345,7 @@
                     <div class="ball-3"></div>
                 </div>
                 <div id="view-11" class="view hidden">
-                    <div class="container-fluid">
+                    <div class="container-fluid mt-5">
                         <div class="row" style="height: 16vh;">
                             <div class="title-box">
                                 <div class="">
@@ -367,7 +368,7 @@
                                 <p class="mb-1">我承諾繼續分享愛，留存愛，</p>
                                 <p class="mb-1">讓這份真摯的情感，</p>
                                 <p class="mb-1">以另一種方式</p>
-                                <p class="mb-5">在時間的消逝中永存。</p>
+                                <p class="mb-3">在時間的消逝中永存。</p>
                             </div>
                         </div>
                         <button id="recordButton" class="notRec">
@@ -378,7 +379,7 @@
                     <div class="ball-2"></div>
                 </div>
                 <div id="view-12" class="view hidden">
-                    <div class="container-fluid">
+                    <div class="container-fluid mt-5">
                         <div class="row" style="height: 16vh;">
                             <div class="title-box mt-3">
                                 <div class="">
@@ -400,7 +401,7 @@
                                 <p class="mb-1">我承諾繼續分享愛，留存愛，</p>
                                 <p class="mb-1">讓這份真摯的情感，</p>
                                 <p class="mb-1">以另一種方式</p>
-                                <p class="mb-5">在時間的消逝中永存。</p>
+                                <p class="mb-3">在時間的消逝中永存。</p>
                             </div>
                         </div>
                         <div class="row mt-5">
@@ -889,25 +890,29 @@
             voice_id = 'LcVF1XITRkxZIR6At8Pc'
 
             if (question7_value === '生理男性') {
-                if (question6_value === '20歲以下'){
-                    voice_id = 'LcVF1XITRkxZIR6At8Pc';
-                } else if (question6_value === '21-40歲'){
+                if (question6_value === '19歲以下'){
+                    voice_id = '7MDIMJM73KLZue6pMcbg';
+                } else if (question6_value === '20-29歲'){
                     voice_id = 'JeRSMGN72RY0R2nv1bFN';
-                } else if (question6_value === '41-60歲'){
+                } else if (question6_value === '30-39歲'){
+                    voice_id = 'Wr5mUIa54stRZKEoX5Tj';
+                } else if (question6_value === '40-49歲'){
                     voice_id = 'EkAO4bU7a0qDtxBbKtQQ';
-                } else if (question6_value === '60歲以上'){
+                } else if (question6_value === '50歲以上'){
                     voice_id = '8lyxQ3p4Q7RhNdg0Nemz';
                 } else {
                     voice_id = 'LcVF1XITRkxZIR6At8Pc';
                 }
             } else if (question7_value === '生理女性') {
-                if (question6_value === '20歲以下'){
-                    voice_id = 'mPz9PxvD3xe6bWZj1zVZ';
-                } else if (question6_value === '21-40歲'){
+                if (question6_value === '19歲以下'){
+                    voice_id = 'bDnx2eAdptou6mAUc5aB';
+                } else if (question6_value === '20-29歲'){
                     voice_id = 'hmRk6IkQCDhCzvopg94o';
-                } else if (question6_value === '41-60歲'){
+                } else if (question6_value === '30-39歲'){
                     voice_id = 'vS8NjtShaQVvmpfyxDPw';
-                } else if (question6_value === '60歲以上'){
+                } else if (question6_value === '40-49歲'){
+                    voice_id = 'RAxcv2u3MsSLRw1Bvtfm';
+                } else if (question6_value === '50歲以上'){
                     voice_id = 'KcCJRcQ66VPubI3Aj8yc';
                 } else {
                     voice_id = 'mPz9PxvD3xe6bWZj1zVZ';
