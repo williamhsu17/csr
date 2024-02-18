@@ -17,6 +17,8 @@ body {
     overflow: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    padding-top: constant(safe-area-inset-top);     /* for iOS 11.0 */
+    padding-top: env(safe-area-inset-top);          /* for iOS 11.2 and above */
 }
 h1, p, span, button {
     font-weight: 700;
