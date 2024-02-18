@@ -580,16 +580,50 @@
                     </div>
                 </div>
                 <div id="view-17" class="view hidden">
-                    <canvas id="myCanvas" width="640" height="480"></canvas>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="title-box mt-5 pt-3" style="z-index: 1040;">
+                                <h1 style="font-size: 1.4em; letter-spacing: 5px;">請使用手機裝置</h1>
+                                <h1 style="font-size: 1.4em; letter-spacing: 5px;">以獲得最佳體驗</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 my-5">
+                                <img src="img/qrCode.png" alt="" class="px-3 py-3" style="max-width: 200px; height: auto; border-radius: 14px; border: white 6px solid;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="title-box" style="z-index: 1040;">
+                                <span class="my-5" style="font-size: 1.2em; letter-spacing: 5px;">聲紋卡 x 器捐病主中心</span>
+                                <h1 class="mt-3" style="font-size: 1.8em; color: #3B3B3B;">為愛獻聲，讓AI替你說愛</h1>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <img src="img/PublicsGroup.png" alt="" class="mx-3">
+                                <img src="img/group.png" alt="">
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
     <script>
-        // initpage
-        const initView = document.getElementById('view-1')
-        initView.classList.remove('hidden');
+        const isPC = window.innerWidth > 800;
+
+        if (isPC) {
+            const pcView = document.getElementById('view-17');
+            if (pcView) {
+                pcView.classList.remove('hidden');
+            }
+        } else {
+            // initpage
+            const initView = document.getElementById('view-1')
+            initView.classList.remove('hidden');
+        }
 
         const imageUrl = 'https://www.nb9060futureplan.com/';
         const shareText = encodeURIComponent("Check out this awesome image!");
