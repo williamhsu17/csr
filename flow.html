@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>為愛獻聲，讓AI替你說</title>
+    <link rel="icon" type="image/x-icon" href="img/LOGO-wave.ico">
+
+    <meta property="og:title" content="為愛獻聲，讓AI替你說">
+    <!-- <meta property="og:description" content="A brief description of your page"> -->
+    <meta property="og:image" content="img/fb_cover.png">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=750960875270921&ev=PageView&noscript=1"/>
+    </noscript>
+</head>
+<body>  
+    <div class="container">
+        <div class="row mt-0">
+            <div id="app" class="mx-0 px-0">
+                <!-- start view-1 -->
+                <div id="view-1" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 36vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.4em;">開始製作專屬卡片</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0 px-5">
+                        <div class="row" style="height: 36vh;">
+                            <div class="col-12 col-md-12">
+                                <form action="">
+                                    <input class="" type="text" name="" id="" style="width: 100%;" placeholder="請輸入instagram帳號">
+                                </form>
+                                <p style="font-size: small;">＊請確保您的帳號設為公開，以便搜索。</p>
+                            </div>
+                        </div>
+                        <footer class="fixed-bottom">
+                            <div class="container-fluid mt-5">
+                                <div class="row">
+                                    <button id="btn-view-1" class="next-btn mb-3">搜尋</button>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                    <div class="ball-1"></div>
+                </div>
+                <!-- end view-1 -->
+                <!-- start view-2 -->
+                <div id="view-2" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 24vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.4em;">請挑許一張照片</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0 px-5">
+                        <div class="row" style="height: 48vh;">
+                            <div class="col-12 col-md-12" style="background-color: rgba(255, 255, 255, 0.2);">
+                                
+                            </div>
+                        </div>
+                        <footer class="fixed-bottom">
+                            <div class="container-fluid mt-5">
+                                <div class="row">
+                                    <button id="btn-view-2" class="next-btn mb-3">下一步</button>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                    <div class="ball-1"></div>
+                </div>
+                <!-- end view-2 -->
+                <!-- start view-3 -->
+                <div id="view-3" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 36vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.4em;">確認照片</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0">
+                        <div class="row" style="height: 36vh;">
+                            <div class="col-12 col-md-12">
+                                <img src="img/card_back.png" style="max-width: 100%; height: auto;" alt="">
+                            </div>
+                        </div>
+                        <footer class="fixed-bottom">
+                            <div class="container-fluid mt-5">
+                                <div class="row">
+                                    <button id="btn-view-3" class="next-btn mb-3">完成</button>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                    <div class="ball-1"></div>
+                </div>
+                <!-- end view-3 -->
+                <!-- start view-4 -->
+                <div id="view-4" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 48vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.4em;">請留下email寄送檔案</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0 px-5">
+                        <div class="row" style="height: 24vh;">
+                            <div class="col-12 col-md-12">
+                                <form action="">
+                                    <input class="" type="text" name="" id="" style="width: 100%;" placeholder="輸入email">
+                                </form>
+                            </div>
+                        </div>
+                        <footer class="fixed-bottom">
+                            <div class="container-fluid mt-5">
+                                <div class="row">
+                                    <button id="btn-view-4" class="next-btn mb-3">送出</button>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                    <div class="ball-4"></div>
+                </div>
+                <!-- end view-4 -->
+                <!-- start view-5 -->
+                <div id="view-5" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 36vh;">
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0 px-5">
+                        <div class="row" style="height: 24vh;">
+                            <div class="col-12 col-md-12">
+                                <p class="mb-2 mt-1" style="font-size: 1.2em;">愛的發聲卡 印製中</p>
+                                <p class="mb-3 mt-1" style="font-size: 1.2em;">請至隔壁機台稍後...</p>
+                                <p class="mb-3 mt-1" style="font-size: 0.7em;">＊卡片印製完成後，靠近手機後方感應可聽到AI音檔。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <!-- end view-4 -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script>
+        const initView = document.getElementById('view-1')
+        initView.classList.remove('hidden');
+
+        const v1Btn = document.getElementById('btn-view-1');
+        const v2Btn = document.getElementById('btn-view-2');
+        const v3Btn = document.getElementById('btn-view-3');
+        const v4Btn = document.getElementById('btn-view-4');
+
+        const views = document.getElementsByClassName('view');
+
+        function navigateToView(viewIndex) {
+            for (let i = 0; i < views.length; i++) {
+                if (i === viewIndex) {
+                    views[i].classList.remove('hidden');
+                    // views[i].style.opacity = '1';
+                } else {
+                    views[i].classList.add('hidden');
+                    // views[i].style.opacity = '0';
+                }
+            }
+        }
+
+        v1Btn.addEventListener('click', () => {
+            navigateToView(1);
+        });
+        v2Btn.addEventListener('click', () => {
+            navigateToView(2);
+        });
+        v3Btn.addEventListener('click', () => {
+            navigateToView(3);
+        });
+        v4Btn.addEventListener('click', () => {
+            navigateToView(4);
+        });
+
+        const playGeneratedAudioButton = document.getElementById("playGeneratedAudioButton");
+        playGeneratedAudioButton.addEventListener("click", () => {
+            console.log('playGeneratedAudio')
+            const audio = document.getElementById("audio");
+    
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        });
+        function getVoiceParameter() {
+            const queryParams = new URLSearchParams(window.location.search);
+            console.log(queryParams.get('voice'))
+            return queryParams.get('voice');
+        }
+
+        async function getMp3Url(voiceParam) {
+            try {
+                const response = await fetch(`https://chatgptdemo.williamhsu.com.tw/images/audio/${voiceParam}/`);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json();
+                const audio = document.getElementById('audio');
+                console.log('audio ready')
+                audio.src = data.audio_upload.audio_url;
+                return data.audio_upload.audio_url;
+            } catch (error) {
+                console.error('Failed to fetch MP3 URL:', error);
+                return null;
+            }
+        }
+
+        const voiceParam = getVoiceParameter();
+        const mp3Url = getMp3Url(voiceParam);
+
+    </script>
+</body>
+</html>
