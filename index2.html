@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>為愛獻聲，讓AI替你說</title>
+    <link rel="icon" type="image/x-icon" href="img/LOGO-wave.ico">
+
+    <meta property="og:title" content=為愛獻聲，讓AI替你說">
+    <!-- <meta property="og:description" content="A brief description of your page"> -->
+    <meta property="og:image" content="img/fb_cover.png">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=750960875270921&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PJ6SKK7B');</script>
+    <!-- End Google Tag Manager -->
+    
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PJ6SKK7B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    <div class="container">
+        <div class="row mt-0">
+            <div id="app" class="mx-0 px-0">
+                <div id="view-1" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 48vh;">
+                            <div class="title-box mt-5 pt-3" style="z-index: 1040;">
+                                <span class="my-5" style="font-size: smaller;">聲紋卡x器捐病主中心</span>
+                                <h1 class="mt-5">為愛獻聲</h1>
+                                <span style="font-size: 1.2em; letter-spacing: 5px;">讓AI替你說愛</span>
+                            </div>
+                            <footer class="fixed-bottom mb-3">
+                                <div class="ball-0"></div>
+                                <img class="" id="wav-image" src="img/sound_wave_vector.svg" alt="" style="position: absolute; width: 100%; left: 0; top: 15%;">
+                                <div class="container-fluid mt-5">
+                                    <div class="row">
+                                        <button id="start-btn" class="mt-1">開始</button>
+                                        <p class="disclaimer mt-2">進入頁面即代表同意 <button class="btn disclaimer p-0" id="disclaimer_link" style="text-decoration: underline;">相關條款聲明</button></p>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
+                    </div>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <div id="view-2" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 86vh;">
+                            <div class="title-box message-box">
+                                <div class="text_content">
+                                    <p class="conversation_content mb-5">Hi你好嗎！</p>
+                                    <p class="conversation_content mb-1">你有多久沒有和最在乎的人</p>
+                                    <p class="conversation_content">好好說話...</p>
+                                </div>
+                            </div>
+                            <img class="" id="mic-image-2" src="img/mic.svg" alt="">
+                        </div>
+                        <!-- <button id="q1-btn" class="mt-5 mb-3">next</button> -->
+                    </div>
+                    <div class="ball-3"></div>
+                </div>
+                <div id="view-3" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 86vh;">
+                            <div class="title-box message-box">
+                                <div class="text_content">
+                                    <p class="mb-1 mt-3" style="font-size: 1.2em;">可能因為害羞、忙碌或其他原因</p>
+                                    <p class="mb-5" style="font-size: 1.2em;">錯過<span style="color: white;">表達愛</span>的機會</p>
+                                    <p class="mb-1" style="font-size: 1.2em;">現在，透過<span style="color: white;">聲紋擬音</span></p>
+                                    <p class="" style="font-size: 1.2em;">把愛說出口沒有那麼難</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <button id="q2-btn" class="mt-5 mb-3">next</button> -->
+                    </div>
+                    <div class="ball-4"></div>
+                    <div class="ball-5"></div>
+                </div>
+                <div id="view-4" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 86vh;">
+                            <div class="title-box message-box">
+                                <div class="text_content">
+                                    <p class="mb-1 mt-5" style="font-size: 1.5em;">留下你想說的話</p>
+                                    <p class="" style="font-size: 1.5em;">讓生命故事美好延傳</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <button id="q3-btn" class="mt-5 mb-3">next</button> -->
+                    </div>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <div id="view-5" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 36vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.2em;">請告訴我</p>
+                                    <p class="" style="font-size: 1.2em;">你想說話的對象</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-3 mb-3">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6">
+                                <div class="custom-dropdown">
+                                    <select id="question_1">
+                                        <option value="">- 對象 -</option>
+                                        <option value="子女">子女</option>
+                                        <option value="朋友">朋友</option>
+                                        <option value="情人">情人</option>
+                                        <option value="家人">家人</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <form action="">
+                                    <input class="" type="text" name="question_2" id="question_2" placeholder="你都如何稱呼他/她？">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="fixed-bottom mb-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <button id="q4-btn" class="next-btn mt-5 mb-3" disabled>選好了&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+                            </div>
+                        </div>
+                    </footer>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <div id="view-6" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 28vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.2em;">難得鼓起勇氣</p>
+                                    <p class="" style="font-size: 1.2em;">你想對<span id="dv_1">家人</span>說些什麼呢？</p>
+                                    <p class="boxed-text" style="font-size: 0.8em;">請選擇至多2句想講的話</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-3 mb-3 px-5">
+                        <div class="row justify-content-center">
+                            <div class="col-12">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" class="question_3" id="question_3_1" value="我花太少時間陪你們">
+                                    <label for="question_3_1" id="q3_1_lable">我花太少時間陪你們...</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" class="question_3" id="question_3_2" value="謝謝你為家庭付出的一切">
+                                    <label for="question_3_2" id="q3_2_lable">謝謝你為家庭付出的一切...</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" class="question_3" id="question_3_3" value="謝謝你總是無條件支持我">
+                                    <label for="question_3_3" id="q3_3_lable">謝謝你總是無條件支持我...</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" class="question_3" id="question_3_4" value="我真的好愛你們">
+                                    <label for="question_3_4" id="q3_4_lable">我真的好愛你們...</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="fixed-bottom mb-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button id="q5-btn-back" class="next-btn next-btn-6 mt-5 mb-3">返回</button>
+                                </div>
+                                <div class="col-6">
+                                    <button id="q5-btn" class="next-btn next-btn-6 mt-5 mb-3" disabled>下一步&nbsp;&nbsp;></button>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <div id="view-7" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 28vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.2em;">再來...</p>
+                                    <p class="" style="font-size: 1.2em;">讓我們增加一些情感濃度</p>
+                                    <p class="boxed-text" style="font-size: 0.8em;">請選擇 1 個想表達的情緒</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-3 mb-3 px-5">
+                        <div class="row justify-content-center">
+                            <div class="col-6 col-md-6">
+                                <div class="custom-checkbox2">
+                                    <input type="checkbox" class="question_4" id="question_4_1" value="真摯">
+                                    <label for="question_4_1" id="q4_1_lable"><span>真摯</span></label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <div class="custom-checkbox2">
+                                    <input type="checkbox" class="question_4" id="question_4_2" value="感激">
+                                    <label for="question_4_2" id="q4_2_lable"><span>感激</span></label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <div class="custom-checkbox2">
+                                    <input type="checkbox" class="question_4" id="question_4_3" value="溫暖">
+                                    <label for="question_4_3" id="q4_3_lable"><span>溫暖</span></label>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-6">
+                                <div class="custom-checkbox2">
+                                    <input type="checkbox" class="question_4" id="question_4_4" value="深情">
+                                    <label for="question_4_4" id="q4_4_lable"><span>深情</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="fixed-bottom mb-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button id="q6-btn-back" class="next-btn next-btn-6 mt-5 mb-3">返回</button>
+                                </div>
+                                <div class="col-6">
+                                    <button id="q6-btn" class="next-btn next-btn-6 mt-5 mb-3" disabled>下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <div id="view-8" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 28vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.2em;">想多了解你</p>
+                                    <p class="" style="font-size: 1.2em;">讓言語更貼近</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container mt-3 mb-5">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-6">
+                                <form action="">
+                                    <input class="" type="text" name="question_5" id="question_5" placeholder="如何稱呼你？">
+                                </form>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="custom-dropdown">
+                                    <select id="question_6">
+                                        <option value="">- 年齡 -</option>
+                                        <option value="19歲以下">19歲以下</option>
+                                        <option value="20-29歲">20-29歲</option>
+                                        <option value="30-39歲">30-39歲</option>
+                                        <option value="40-49歲">40-49歲</option>
+                                        <option value="50歲以上">50歲以上</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="custom-dropdown">
+                                    <select id="question_7">
+                                        <option value="">- 性別 -</option>
+                                        <option value="生理男性">生理男性</option>
+                                        <option value="生理女性">生理女性</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <footer class="fixed-bottom mb-3">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button id="q7-btn-back" class="next-btn next-btn-6 mt-5 mb-3">返回</button>
+                                </div>
+                                <div class="col-6">
+                                    <button id="q7-btn" class="next-btn next-btn-6 mt-5 mb-3" disabled>下一步&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;></button>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <div id="view-9" class="view hidden">
+                    <div class="container-fluid mx-0 px-0">
+                        <div class="row" style="height: 60vh;">
+                            <div class="title-box mt-5">
+                                <div class="" style="margin-top: 76%;">
+                                    <img src="img/context_generating.gif" style="width: 100%;" alt="">
+                                    <p class="mb-1 mt-5" style="font-size: 1em;">情感醞釀中，請稍候...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <button id="q8-btn" class="mt-5 mb-3">next</button> -->
+                    </div>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <div id="view-10" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 80vh;">
+                            <div class="title-box message-box">
+                                <!-- <p id="result_content" style="font-size: small;">aa，你對我們家庭的愛與付出讓我每天都感到幸福，一路上面對的各種困難，你用你的雙手為我們搭建起最堅固的家。無論我多麼困頓，你總是在我背後無條件支持我，每次看到你堅定的眼神，就有了繼續前進的力量。我希望你知道，你對我來說有多麼重要。再一次對你說：謝謝你，我的朋友aa，謝謝你為家庭付出的一切，謝謝你無條件地支持我。</p> -->
+                                <div class="text_content">
+                                    <p class="conversation_content mb-5">你願意親身錄下聲音</p>
+                                    <p class="conversation_content mb-1">讓我為你的聲音採樣?</p>
+                                </div>
+                            </div>
+                            <img class="" id="mic-image-3" src="img/mic.svg" alt="">
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button id="q9-1-btn" class="next-btn mt-3" style="width: 80%;">我同意</button>
+                            </div>
+                            <div class="col-6">
+                                <button id="q9-2-btn" class="next-btn mt-3" style="width: 80%;">AI幫幫我</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ball-3"></div>
+                </div>
+                <div id="view-11" class="view hidden">
+                    <div class="container-fluid mt-5">
+                        <div class="row" style="height: 16vh;">
+                            <div class="title-box">
+                                <div class="">
+                                    <p class="mt-3" style="font-size: 1.4em;">[ 愛的宣言 ]</p>
+                                    <p class="boxed-text" style="font-size: 0.8em; width: 80%;">請在安靜的環境，放慢速度念誦以下文字</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 record_message_box">
+                                <p class="mb-1">這個匆忙的時代，我們經常錯失</p>
+                                <p class="mb-5">表達內心情感的機會。</p>
+                                
+                                <p class="mb-1">現在，我願透過留下聲紋，</p>
+                                <p class="mb-1">讓愛超越時空的限制，</p>
+                                <p class="mb-5">賦予所愛之人力量和安慰。</p>
+
+                                <p class="mb-1">我承諾繼續分享愛，留存愛，</p>
+                                <p class="mb-1">讓這份真摯的情感，</p>
+                                <p class="mb-1">以另一種方式</p>
+                                <p class="mb-3">在時間的消逝中永存。</p>
+                            </div>
+                        </div>
+                        <button id="recordButton" class="notRec">
+                            <img src="img/record_start.svg" id="recordImage" alt="">
+                        </button>
+                    </div>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <div id="view-12" class="view hidden">
+                    <div class="container-fluid mt-5">
+                        <div class="row" style="height: 16vh;">
+                            <div class="title-box mt-3">
+                                <div class="">
+                                    <p class="mt-3" style="font-size: 1.4em;">[ 愛的宣言 ]</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 record_message_box">
+                                <p class="mb-1">這個匆忙的時代，我們經常錯失</p>
+                                <p class="mb-5">表達內心情感的機會。</p>
+                                
+                                <p class="mb-1">現在，我願透過留下聲紋，</p>
+                                <p class="mb-1">讓愛超越時空的限制，</p>
+                                <p class="mb-5">賦予所愛之人力量和安慰。</p>
+
+                                <p class="mb-1">我承諾繼續分享愛，留存愛，</p>
+                                <p class="mb-1">讓這份真摯的情感，</p>
+                                <p class="mb-1">以另一種方式</p>
+                                <p class="mb-3">在時間的消逝中永存。</p>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-6">
+                                <button id="q11-btn-back" class="next-btn mt-3" style="width: 80%;">重新採樣</button>
+                            </div>
+                            <div class="col-6">
+                                <button id="q11-btn" class="next-btn mt-3" style="width: 80%;">完成</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <div id="view-13" class="view hidden">
+                    <div class="container-fluid mx-0 px-0">
+                        <div class="row" style="height: 60vh;">
+                            <div class="title-box mt-5">
+                                <div class="" style="margin-top: 40%; position: relative;">
+                                    <img src="img/sound_wave_circle.gif" style="width: 90%; position: absolute; top: 0; left: 5%;" alt="">
+                                    <p class="" style="font-size: 1em;   position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: 170px;
+                                    bottom: 0;
+                                    margin: auto;">愛在發聲中...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                    <footer class="fixed-bottom">
+                        <!-- <button id="q12-btn" class="mt-5 mb-3">next</button> -->
+                    </footer>
+                </div>
+                <div id="view-14" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 24vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.2em;">讓我們來聽聽</p>
+                                    <p class="" style="font-size: 1.2em;">屬於你 愛的發聲</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0 px-5">
+                        <div class="row" style="height: 48vh;">
+                            <div class="title-box message-box" style="margin-top: 0;">
+                                <img src="img/result_sound_wave_animation.svg" alt="" style="width: 100%; height: auto; position: absolute; top: 50%; transform: translateY(-50%);">
+                                <button id="playGeneratedAudioButton" style="width: 20%; height: auto; position: absolute; top: 50%; transform: translateY(-50%); background-color: transparent; border: none; cursor: pointer; z-index: 1000;">
+                                    <img src="img/result_play_icon.svg" alt="">
+                                </button>
+                                <audio id="audio" src=""></audio>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">
+                                <button id="inviteButton" class="" style="width: 100%; height: 100%;">邀請朋友<br>一起玩</button>
+                            </div>
+                            <div class="col-6">
+                                <button id="shareButton" class="" style="width: 100%; height: 100%;">分享給<br>他/她</button>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <button id="q13-btn" class=" mt-3 invisible_btn"><img src="img/result_watch_more.svg" style="width: 12%; height: auto;" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ball-1"></div>
+                </div>
+                <div id="view-15" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <button id="q14-btn" class="mt-1 invisible_btn"><img src="img/result_return.svg" style="width: 8%; height: auto;" alt=""></button>
+                            </div>
+                        </div>
+                        <div class="row" style="height: 12vh;">
+                            <div class="title-box">
+                                <div class="">
+                                    <p class="mt-0 mb-0" style="font-size: 1.4em;"><span style="font-size: 1.6em; color: white;">愛</span>的心聲已傳達</p>
+                                    <p class="mt-0 mb-0" style="font-size: 1em;">還有另外一種方式，「再現生機」</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 record_message_box">
+                                <img src="img/soundcard.svg" class="mb-3" style="width: 100%;" alt="">
+                                <p class="mb-1" style="color: #3B3B3B;">錄下同意器官捐贈的任何心聲</p>
+                                <p class="mb-1" style="color: #3B3B3B;">讓你的愛和理想</p>
+                                <p class="mb-3" style="color: #3B3B3B;">能被在乎的人聽見、留存記憶中</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- <button id="" class="more-btn mt-2 py-2">了解器捐聲紋卡</button> -->
+                                <a class="more-btn button mt-2" target="_blank" href="https://linktr.ee/speakwithloveai">了解器捐聲紋卡</a>
+                            </div>
+                            <div class="col-12">
+                                <button id="back_btn" class="more-btn mt-1">重新 為愛發聲</button>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="fixed-bottom">
+                        <a target="_blank" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=為愛獻聲，讓愛留存&dates=20240309/20240326&details=為愛獻聲，讓愛留存&location=台北市信義區光復南路133號 (松菸西向一樓 男澡堂)">
+                            <img src="img/activity.svg" alt="">
+                        </a>
+                    </footer>
+                    <div class="ball-3"></div>
+                </div>
+                <div id="view-16" class="view hidden" style="background-color: #3B3B3B;">
+                    <div class="container-fluid" style="height: 100%;">
+                        <div class="row">
+                            <div class="col d-flex justify-content-end">
+                                <button class="btn mt-5" id="disclaimer_close" style=" color: white;">X</button>
+                            </div>
+                        </div>
+                        <div class="row" style="height: 100%; overflow: auto; scrollbar-width: 0;">
+                            <div class="col-12">
+                                <div class="" style="text-align: left; color: white;">
+                                    <p>本活動之主辦單位：​</p>
+                                    <p>財團法人器官捐贈移植登錄及病人自主推廣中心、陽獅集團(下稱主辦單位)​​</p>
+                                    <p>本活動參與者於參加本活動前應閱讀以下本活動條款：​</p>
+                                    <p>*本活動參與者於參加本活動之同時，即視為已同意接受本活動條款。</p>
+                                    <ol>
+                                        <li>「為愛獻聲，讓AI替你說」活動網站將存取所有本活動參與者參與本活動所生成的成果內容(以下稱本活動生成內容)作為展示。主辦單位就全部本活動生成內容均保有彈性使用權利，恕不另行通知。</li>
+                                        <li>本活動所有相關素材及本活動生成內容，包括但不限於著作（包含著作人格權及著作財產權）、商標、圖形、網頁、程式碼、智慧財產權以及其他權利及利益等，均為主辦單位所有。本活動參與者參與本活動所生成的本活動生成內容並不代表其已取得或被授予上述的任何權利。除另經主辦單位事前書面同意外，本活動參與者或任何第三人均不得以任何方法（無論直接或間接、有償或無償、商用或非商用）逕行使用(包括但不限於重製、改作、散布、出租、發行、公開發表、公開播送、還原工程、解編、反向組譯等)或行使任何屬於主辦單位的權利。</li>
+                                        <li>本活動生成內容經由第三方平台「Open AI ChatGPT」、「ElevenLabs」之AI生成技術產出，如有相關智慧財產權異議與主辦單位無關。主辦單位不對因使用前揭AI生成技術而引起之任何損失、損害、訴訟或其他問題負責，亦不保證前揭技術所協助生成的本活動生成內容能符合本活動參與者之預期結果。</li>
+                                        <li>主辦單位不保證本活動網站功能、及本活動生成內容相關的AI生成技術之風險和不確定性(包括但不限於遭駭客攻擊或盜取、電腦病毒入侵、系統故障、使用者故意或過失、相容性、因政府/法令管制或天災等因素)，亦不對此等風險和不確定性承擔任何義務與責任。</li>
+                                        <li>本活動如因任何電腦、網際網路、各式線路、技術或其他不可歸責於主辦單位或其委託之執行廠商的因素，而致使本活動參與者所填寫、選擇、輸入或產出之資料有延遲、錯誤、無法辨識、遺失、毀損等資料無效之情況，主辦單位及受委託的執行廠商均不負任何法律責任或賠償責任，本活動參與者不得因此異議。</li>
+                                        <li>本活動參與者聲明並保證本活動生成內容不會被用於任何非法活動、違反社會道德、或違反公序良俗之行為(包括但不限於侵害他人法益、侵犯他人隱私、詐欺、詆毀、不當傳銷、販賣非法物品等)，倘因本活動參與者之因素所致的相關爭議一概與主辦單位無涉，概由本活動參與者承擔所有相關的法律責任與完全賠償責任。</li>
+                                        <li>如因本活動參與者未遵守本活動條款而致影響主辦單位或第三方之權益、或使主辦單位或第三方受有任何損害，本活動參與者應自負一切民刑事責任與完全賠償責任。</li>
+                                        <li>主辦單位保留不時審查、補充、解釋、修改、終止、變更以上條款與本活動內容細節之權利，任何關於本活動內容、執行與變更詳情以主辦單位所公布之訊息為準。</li>
+                                        <li>主辦單位有權對本活動所有事宜與爭議作出解釋或裁決。如有任何未盡事宜，均以主辦單位依中華民國法律解釋之。</li>
+                                    </ol>
+                                    <h3>個資蒐集同意聲明</h3>
+                                    <p>為落實個人資料之保護，依照個人資料保護法第8條規定進行蒐集前之告知：</p>
+                                    <p>一、個人資料蒐集之目的及用途：</p>
+                                    <p>目的在於進行活動辦理之相關作業，主辦單位並將利用您所提供之姓名及聲紋特徵等以AI生成技術產出活動內容。</p>
+                                    <p>二、蒐集之個人資料類別：</p>
+                                    <ol>
+                                        <li>中文姓名</li>
+                                        <li>聲紋特徵</li>
+                                        <li>性別</li>
+                                        <li>年齡</li>
+                                        <li>主辦單位因活動需求所需收集之資料，由主辦單位另訂之。</li>
+                                    </ol>
+                                    <p>三、個人資料利用之期間、地區、對象：</p>
+                                    <ol>
+                                        <li>期間：您同意參加活動之日起，至活動結束日起算30日為止。</li>
+                                        <li>期間由主辦單位保存您的個人資料，以作為本人、主辦單位查詢、確認證明及經由第三方平台「Open AI ChatGPT」、「ElevenLabs」之AI生成技術產出內容。</li>
+                                        <li>您的個人資料將用於主辦單位提供服務之地區</li>
+                                        <li>對象：參與本活動並產出生成內容者。</li>
+                                    </ol>
+                                    <p>四、依據個資法第3條規定，報名者對個人資料於保存期限內得行使以下權利：</p>
+                                    <ol>
+                                        <li>查詢或請求閱覽</li>
+                                        <li>請求製給複製本</li>
+                                        <li>請求補充或更正</li>
+                                        <li>請求停止蒐集、處理或利用</li>
+                                        <li>請求刪除</li>
+                                    </ol>
+                                    <p>五、提醒：</p>
+                                    <p>您可自由選擇提供個人資料，若您拒絕提供使用本服務所必須之資料，將可能導致無法使用本服務。</p>
+                                    <p>請問您是否願以電子文件方式同意主辦單位蒐集、處理及利用您的個人資料：</p>
+                                    <p>(請注意，此處點選同意具有個人資料保護法所定之書面同意效果。)</p>
+                                    <p>同意，代表您已閱畢本次活動之個資告知事項，並願以電子文件方式同意主辦單位蒐集、處理及利用您的個人資料。</p>
+                                    <p>不同意，代表您不同意主辦單位於本次活動蒐集、處理及利用您的個人資料，請關閉此頁面。</p>
+                                    <p>若有任何疑問您可洽主辦單位。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="view-17" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="title-box mt-5 pt-3" style="z-index: 1040;">
+                                <h1 style="font-size: 1.4em; letter-spacing: 5px;">請使用手機裝置</h1>
+                                <h1 style="font-size: 1.4em; letter-spacing: 5px;">以獲得最佳體驗</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 my-5">
+                                <img src="img/qrCode.png" alt="" class="px-3 py-3" style="max-width: 200px; height: auto; border-radius: 14px; border: white 6px solid;">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="title-box" style="z-index: 1040;">
+                                <span class="my-5" style="font-size: 1.2em; letter-spacing: 5px;">聲紋卡 x 器捐病主中心</span>
+                                <h1 class="mt-3" style="font-size: 1.8em; color: #3B3B3B;">為愛獻聲，讓AI替你說愛</h1>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <img src="img/PublicsGroup.png" alt="" class="mx-3">
+                                <img src="img/group.png" alt="">
+                            </div>
+                        </div>
+                        <div class="ball-6"></div>
+                        <div class="ball-7"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script>
+        const isPC = window.innerWidth > 20000;
+
+        if (isPC) {
+            const pcView = document.getElementById('view-17');
+            if (pcView) {
+                pcView.classList.remove('hidden');
+            }
+        } else {
+            // initpage
+            const initView = document.getElementById('view-1')
+            initView.classList.remove('hidden');
+        }
+
+        const imageUrl = 'https://www.nb9060futureplan.com/';
+        const shareText = encodeURIComponent("Check out this awesome image!");
+        const shareUrl = encodeURIComponent(window.location.href);
+
+        const downloadSHare = document.querySelector(".download-share");
+
+        const startBtn = document.getElementById('start-btn');
+        const startBuildingBtn = document.getElementById('start-building-btn');
+
+        const q4Btn = document.getElementById('q4-btn');
+        const q5Btn = document.getElementById('q5-btn');
+        const q6Btn = document.getElementById('q6-btn');
+        const q7Btn = document.getElementById('q7-btn');
+        const q5BtnBack = document.getElementById('q5-btn-back');
+        const q6BtnBack = document.getElementById('q6-btn-back');
+        const q7BtnBack = document.getElementById('q7-btn-back');
+        // const q8Btn = document.getElementById('q8-btn');
+        const q9_1Btn = document.getElementById('q9-1-btn');
+        const q9_2Btn = document.getElementById('q9-2-btn');
+        // const q10Btn = document.getElementById('q10-btn');
+        const q11Btn = document.getElementById('q11-btn');
+        const q11BtnBack = document.getElementById('q11-btn-back');
+        // const q12Btn = document.getElementById('q12-btn');
+        const q13Btn = document.getElementById('q13-btn');
+        const q14Btn = document.getElementById('q14-btn');
+
+        const views = document.getElementsByClassName('view');
+        const result = document.getElementById('result');
+
+        const btnHome = document.getElementById('btn_home');
+
+        const disclaimerClose = document.getElementById('disclaimer_close');
+        const disclaimerLink = document.getElementById('disclaimer_link');
+
+        const nbLogoR = document.getElementById('nb-logo-r');
+
+        var q1Btns = document.getElementsByClassName("q1-btn");
+        var q2Btns = document.getElementsByClassName("q2-btn");
+        var q3Btns = document.getElementsByClassName("q3-btn");
+        var q4Btns = document.getElementsByClassName("q4-btn");
+        
+        const question1 = document.getElementById("question_1");
+        const dv1 = document.getElementById("dv_1");
+        let question1_value = "";
+        const question2 = document.getElementById("question_2");
+        let question2_value = "";
+        const question3s = document.querySelectorAll('.question_3');
+        let selectedCount = 0;
+        let question3_value = "";
+        const question3_1_input = document.getElementById("question_3_1");
+        const question3_1_label = document.getElementById("q3_1_lable");
+        const question3_2_input = document.getElementById("question_3_2");
+        const question3_2_label = document.getElementById("q3_2_lable");
+        const question3_3_input = document.getElementById("question_3_3");
+        const question3_3_label = document.getElementById("q3_3_lable");
+        const question3_4_input = document.getElementById("question_3_4");
+        const question3_4_label = document.getElementById("q3_4_lable");
+
+        const question4s = document.querySelectorAll('.question_4');
+        let selectedCount4 = 0;
+        let question4_value = "";
+        const question5 = document.getElementById("question_5");
+        let question5_value = "";
+        const question6 = document.getElementById("question_6");
+        let question6_value = "";
+        const question7 = document.getElementById("question_7");
+        let question7_value = "";
+
+        function checkQuestionValue() {
+            if (question1_value !== "" && question2_value !== "") {
+                q4Btn.disabled = false;
+            } else {
+                q4Btn.disabled = true;
+            }
+            if (question3_value !== "") {
+                q5Btn.disabled = false;
+            } else {
+                q5Btn.disabled = true;
+            }
+            if (question4_value !== "") {
+                q6Btn.disabled = false;
+            } else {
+                q6Btn.disabled = true;
+            }
+            if (question7_value !== "" && question6_value !== "" && question6_value !== "") {
+                q7Btn.disabled = false;
+            } else {
+                q7Btn.disabled = true;
+            }
+        }
+
+        question1.addEventListener("change", function () {
+            question1_value = question1.value;
+            dv1.textContent = question1_value;
+            checkQuestionValue();
+            if (question1_value === '子女') {
+                question3_1_input.value = "我很為你驕傲";
+                question3_1_label.textContent = "我很為你驕傲";
+                question3_2_input.value = "家永遠是妳的避風港";
+                question3_2_label.textContent = "家永遠是妳的避風港";
+                question3_3_input.value = "你是我最愛的寶貝";
+                question3_3_label.textContent = "你是我最愛的寶貝";
+                question3_4_input.value = "有空多打電話回家";
+                question3_4_label.textContent = "有空多打電話回家..";
+            } else if (question1_value === '朋友') {
+                question3_1_input.value = "想起過去一起度過的時光";
+                question3_1_label.textContent = "想起過去一起度過的時光...";
+                question3_2_input.value = "我們找時間一起出去玩吧";
+                question3_2_label.textContent = "我們找時間一起出去玩吧";
+                question3_3_input.value = "好久不見，我很懷念";
+                question3_3_label.textContent = "好久不見，我很懷念...";
+                question3_4_input.value = "謝謝你總是給我鼓勵";
+                question3_4_label.textContent = "謝謝你總是給我鼓勵";
+            } else if (question1_value === '情人') {
+                question3_1_input.value = "謝謝有你在";
+                question3_1_label.textContent = "謝謝有你在...";
+                question3_2_input.value = "雖然偶爾有爭吵";
+                question3_2_label.textContent = "雖然偶爾有爭吵";
+                question3_3_input.value = "我真的好愛你";
+                question3_3_label.textContent = "我真的好愛你..";
+                question3_4_input.value = "我很喜歡和你在一起";
+                question3_4_label.textContent = "我很喜歡和你在一起...";
+            } else if (question1_value === '家人') {
+                question3_1_input.value = "我花太少時間陪你們";
+                question3_1_label.textContent = "我花太少時間陪你們...";
+                question3_2_input.value = "謝謝你為家庭付出的一切";
+                question3_2_label.textContent = "謝謝你為家庭付出的一切...";
+                question3_3_input.value = "謝謝你總是無條件支持我";
+                question3_3_label.textContent = "謝謝你總是無條件支持我...";
+                question3_4_input.value = "我真的好愛你們";
+                question3_4_label.textContent = "我真的好愛你們...";
+            } else {
+                question3_1_input.value = "我花太少時間陪你們";
+                question3_1_label.textContent = "我花太少時間陪你們...";
+                question3_2_input.value = "謝謝你為家庭付出的一切";
+                question3_2_label.textContent = "謝謝你為家庭付出的一切...";
+                question3_3_input.value = "謝謝你總是無條件支持我";
+                question3_3_label.textContent = "謝謝你總是無條件支持我...";
+                question3_4_input.value = "我真的好愛你們";
+                question3_4_label.textContent = "我真的好愛你們...";
+            }
+        });
+        
+        question2.addEventListener("input", function() {
+            question2_value = question2.value;
+            checkQuestionValue();
+        });
+        question3s.forEach(question3 => {
+            question3.addEventListener("change", function() {
+                if (this.checked) {
+                    if (selectedCount >= 2) {
+                        this.checked = false;
+                    } else {
+                        selectedCount++;
+
+                        if (this.checked) {
+                            this.classList.add("selected");
+                            question3_value = Array.from(question3s)
+                                .filter(checkbox => checkbox.checked)
+                                .map(checkbox => checkbox.value);
+                        } else {
+                            question3_value = "";
+                        }
+                    }
+                } else {
+                    selectedCount--;
+                    this.classList.remove("selected");
+                }
+                checkQuestionValue();
+            });
+        });
+        question4s.forEach(question4 => {
+            question4.addEventListener("change", function() {
+                if (this.checked) {
+                    if (selectedCount4 >= 1) {
+                        this.checked = false;
+                    } else {
+                        selectedCount4++;
+
+                        if (this.checked) {
+                            this.classList.add("selected");
+                            question4_value = this.value
+                        } else {
+                            question4_value = "";
+                        }
+                    }
+                } else {
+                    selectedCount4--;
+                    this.classList.remove("selected");
+                }
+                checkQuestionValue();
+            });
+        });
+        question5.addEventListener("input", function() {
+            question5_value = question5.value;
+            checkQuestionValue();
+        });
+        question6.addEventListener("input", function() {
+            question6_value = question6.value;
+            checkQuestionValue();
+        });
+        question7.addEventListener("input", function() {
+            question7_value = question7.value;
+            checkQuestionValue();
+        });
+
+        const getData = async (url, data) => {
+            try {
+                const headers = new Headers({
+                    'Content-Type': 'application/json',
+                });
+
+                const requestOptions = {
+                    method: 'POST',
+                    headers: headers,
+                    body: JSON.stringify(data),
+                };
+                const response = await fetch(url, requestOptions);
+
+                if (!response.ok) {
+                throw new Error(`HTTP error: ${response.status}`);
+                }
+
+                const jsonResponse = await response.json();
+                return jsonResponse;
+
+            } catch (error) {
+                console.error('Error sending GET request:', error);
+            }
+        };
+
+        const inputs = document.getElementsByClassName('form-check-input');
+
+        let result_content = '"我看著你長大，眼前的你是我生命中最重要的禮物，我很為你驕傲。你知道嗎，你的每一個小小的成就，都會讓我身為爸爸的心裡無比的歡喜與驕傲。記得，家，這個讓你有深深依附感的地方，永遠是你的避風港，無論你何時需要，我們都在這裡等你。我們的愛、我們的擁抱，永遠準備好給你暖暖的心頭。"'
+
+        startBtn.addEventListener('click', () => {
+            navigateToView(1);
+            setTimeout(function() {
+                navigateToView(2);
+            }, 3000);
+            setTimeout(function() {
+                navigateToView(3);
+            }, 6000);
+            setTimeout(function() {
+                navigateToView(4);
+            }, 9000);
+        });
+
+        q4Btn.addEventListener('click', () => {
+            navigateToView(5);
+        });
+        q5Btn.addEventListener('click', () => {
+            navigateToView(6);
+        });
+        q6Btn.addEventListener('click', () => {
+            navigateToView(7);
+        });
+        q7Btn.addEventListener('click', () => {
+            handleResults();
+            navigateToView(8);
+            setTimeout(function() {
+                navigateToView(9);
+            }, 24000);
+        });
+
+        q5BtnBack.addEventListener('click', () => {
+            navigateToView(4);
+        });
+        q6BtnBack.addEventListener('click', () => {
+            navigateToView(5);
+        });
+        q7BtnBack.addEventListener('click', () => {
+            navigateToView(6);
+        });
+
+        // q8Btn.addEventListener('click', () => {
+        //     navigateToView(9);
+        // });
+        q9_1Btn.addEventListener('click', () => {
+            navigateToView(10);
+        });
+
+        let audioBlobURL = '';
+        let shareId = 1;
+
+        q9_2Btn.addEventListener('click', () => {
+            const options = {
+                method: 'POST',
+                headers: {
+                    'xi-api-key': '9976851957f5eb5164ed6dd91dce6c3f',
+                    'Content-Type': 'application/json'
+                },
+                body: '{"text":' + result_content + ',"model_id":"eleven_multilingual_v2","voice_settings":{"similarity_boost":0.5,"stability":0.5}}'
+            };
+            console.log(options)
+
+            voice_id = 'LcVF1XITRkxZIR6At8Pc'
+
+            if (question7_value === '生理男性') {
+                if (question6_value === '19歲以下'){
+                    voice_id = '7MDIMJM73KLZue6pMcbg';
+                } else if (question6_value === '20-29歲'){
+                    voice_id = 'JeRSMGN72RY0R2nv1bFN';
+                } else if (question6_value === '30-39歲'){
+                    voice_id = 'Wr5mUIa54stRZKEoX5Tj';
+                } else if (question6_value === '40-49歲'){
+                    voice_id = 'EkAO4bU7a0qDtxBbKtQQ';
+                } else if (question6_value === '50歲以上'){
+                    voice_id = '8lyxQ3p4Q7RhNdg0Nemz';
+                } else {
+                    voice_id = 'LcVF1XITRkxZIR6At8Pc';
+                }
+            } else if (question7_value === '生理女性') {
+                if (question6_value === '19歲以下'){
+                    voice_id = 'bDnx2eAdptou6mAUc5aB';
+                } else if (question6_value === '20-29歲'){
+                    voice_id = 'hmRk6IkQCDhCzvopg94o';
+                } else if (question6_value === '30-39歲'){
+                    voice_id = 'vS8NjtShaQVvmpfyxDPw';
+                } else if (question6_value === '40-49歲'){
+                    voice_id = 'RAxcv2u3MsSLRw1Bvtfm';
+                } else if (question6_value === '50歲以上'){
+                    voice_id = 'KcCJRcQ66VPubI3Aj8yc';
+                } else {
+                    voice_id = 'mPz9PxvD3xe6bWZj1zVZ';
+                }
+            }
+            else {
+                voice_id = 'LcVF1XITRkxZIR6At8Pc'
+            }
+
+            fetch('https://api.elevenlabs.io/v1/text-to-speech/' + voice_id , options)
+            .then(response => response.blob())
+            .then(blob => {
+                audioBlobURL = URL.createObjectURL(blob);
+                const audio = document.getElementById('audio');
+                audio.src = audioBlobURL;
+                
+                const fileName = 'csr.mp3';
+                const audioFile = new File([blob], fileName, { type: 'audio/mp3' });
+
+                let formData = new FormData();
+                formData.append("voice", audioFile);
+                formData.append("voice_name", "Sample Voice"); // Add other fields as needed
+
+                fetch('https://chatgptdemo.williamhsu.com.tw/images/upload_audio/', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    shareId = data.voice.id;
+                })
+                .catch(error => console.error(error));
+            })
+            .catch(error => console.error('Error fetching audio:', error));
+
+            navigateToView(12);
+            setTimeout(function() {
+                navigateToView(13);
+            }, 24000);
+        });
+        // q10Btn.addEventListener('click', () => {
+        //     navigateToView(11);
+        // });
+        // elevenlabs api
+        q11Btn.addEventListener('click', () => {
+            const file = new Blob(audioChunks, { 'type' : 'audio/mp3' });
+
+            console.log(file)
+
+            const form = new FormData();
+            form.append("name", "csr_" + Date.now());
+            form.append("files", file);
+
+            const options = {
+            method: 'POST',
+            headers: {
+                'xi-api-key': '9976851957f5eb5164ed6dd91dce6c3f',
+                // 'Content-Type': 'multipart/form-data'
+            }
+            };
+
+            options.body = form;
+
+            fetch('https://api.elevenlabs.io/v1/voices/add', options)
+            .then(response => response.json())
+            .then(response => {
+                console.log(response.voice_id)
+                
+                const options = {
+                    method: 'POST',
+                    headers: {
+                        'xi-api-key': '9976851957f5eb5164ed6dd91dce6c3f',
+                        'Content-Type': 'application/json'
+                    },
+                    body: '{"text":' + result_content + ',"model_id":"eleven_multilingual_v2","voice_settings":{"similarity_boost":0.5,"stability":0.5}}'
+                };
+                console.log(options)
+
+                fetch('https://api.elevenlabs.io/v1/text-to-speech/' + response.voice_id, options)
+                .then(response => response.blob())
+                .then(blob => {
+                    audioBlobURL = URL.createObjectURL(blob);
+                    const audio = document.getElementById('audio');
+                    audio.src = audioBlobURL;
+
+                    const fileName = 'csr.mp3';
+                    const audioFile = new File([blob], fileName, { type: 'audio/mp3' });
+
+                    let formData = new FormData();
+                    formData.append("voice", audioFile);
+                    formData.append("voice_name", "Sample Voice"); // Add other fields as needed
+
+                    fetch('https://chatgptdemo.williamhsu.com.tw/images/upload_audio/', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        shareId = data.voice.id;
+                    })
+                    .catch(error => console.error(error));
+                })
+                .catch(error => console.error('Error fetching audio:', error));
+
+                navigateToView(12);
+                setTimeout(function() {
+                    navigateToView(13);
+                }, 20000);
+            })
+            .catch(err => console.error(err));
+
+            navigateToView(12);
+            setTimeout(function() {
+                navigateToView(13);
+            }, 20000);
+        });
+        q11BtnBack.addEventListener('click', () => {
+            navigateToView(10);
+        });
+        // q12Btn.addEventListener('click', () => {
+        //     navigateToView(13);
+        // });
+        q13Btn.addEventListener('click', () => {
+            const audio = document.getElementById("audio");
+            audio.pause()
+            navigateToView(14);
+        });
+        q14Btn.addEventListener('click', () => {
+            navigateToView(13);
+        });
+
+        // disclaimerClose.addEventListener('click', () => {
+        //     navigateToView(0);
+        // });
+        // disclaimerLink.addEventListener('click', () => {
+        //     navigateToView(10);
+        // });
+
+        // Add a click event to each element
+		for (var i = 0; i < q1Btns.length; i++) {q1Btns[i].addEventListener('click', () => {navigateToView(3);});}
+        for (var i = 0; i < q2Btns.length; i++) {q2Btns[i].addEventListener('click', () => {navigateToView(4);});}
+        for (var i = 0; i < q3Btns.length; i++) {q3Btns[i].addEventListener('click', () => {navigateToView(5);});}
+        for (var i = 0; i < q4Btns.length; i++) {
+            q4Btns[i].addEventListener('click', () => {
+                navigateToView(6); // Show the wait view
+                setTimeout(() => {
+                    handleResults();
+                }, 2000),
+                setTimeout(() => {
+                    if (window.matchMedia('(min-width: 768px)').matches) {
+                        
+                    } else {
+                        document.getElementById('navbar').classList.add('hidden');
+                        swipeBackground.style.backgroundImage = 'url('+resultImage.src+')';
+                        navigateToView(11);
+                        setTimeout(() => {
+                            swipeBackground.style.backgroundPosition = '100% center';
+                        }, 100);
+                        // setTimeout(() => {
+                        //     // swipeBackground.style.backgroundPosition = '100% center';
+                        //     // document.body.style.backgroundImage = originalBackgroundImage;
+                        // }, 1700);
+                    }
+                }, 16500);
+                setTimeout(() => {
+                    displayResults();
+                }, 18500);
+                setTimeout(() => {
+                    navigateToView(7); // Show the result view after 5 seconds
+                    document.getElementById('navbar').classList.remove('hidden');
+                    swipeBackground.style.backgroundPosition = '0% center';
+                    nbLogoR.classList.remove('hidden');
+                }, 19000);
+            });
+        }
+
+        function navigateToView(viewIndex) {
+            for (let i = 0; i < views.length; i++) {
+                if (i === viewIndex) {
+                    views[i].classList.remove('hidden');
+                    // views[i].style.opacity = '1';
+                } else {
+                    views[i].classList.add('hidden');
+                    // views[i].style.opacity = '0';
+                }
+            }
+        }
+        async function handleResults() {
+            console.log('handleResults')
+            var formData = {
+                age: question6_value,
+                gender: question7_value,
+                relation: question1_value,
+                name: question2_value,
+                element: question3_value.join(", "),
+                emotion: question4_value,
+            };
+            console.log(formData)
+
+            // Send a GET request with the answers as query parameters
+            const url = `https://chatgptdemo.williamhsu.com.tw/csr_demo_page/run/`;
+            
+            const responseData = await getData(url, formData);
+
+            if (responseData) {
+                console.log(responseData)
+                console.log(typeof result_content)
+                console.log(result_content)
+                result_content = JSON.stringify(responseData.content, null, 2)
+                console.log(typeof result_content)
+                console.log(result_content)
+                // document.getElementById("result_content").textContent = JSON.stringify(responseData.content, null, 2);
+            }
+        }
+
+        const playGeneratedAudioButton = document.getElementById("playGeneratedAudioButton");
+        
+        playGeneratedAudioButton.addEventListener("click", () => {
+            console.log('playGeneratedAudio')
+            const audio = document.getElementById("audio");
+    
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        });
+        document.getElementById("inviteButton").addEventListener("click", function() {
+            console.log('invite')
+            if (navigator.share) {
+                navigator.share({
+                    title: '一起為愛獻聲，把愛說出口！',
+                    text: '一起為愛獻聲，把愛說出口！',
+                    url: window.location.href
+                }).then(function() {
+                    console.log('Shared successfully');
+                }).catch(function(error) {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                alert('Sharing is not supported on this browser. You can manually copy the URL.');
+            }
+        });
+        document.getElementById("back_btn").addEventListener("click", function() {
+            question1.value = "";
+            question1_value = "";
+            question2.value = "";
+            question2_value = "";
+            question3_value = "";
+            question3_1_input.classList.remove("selected");
+            question3_2_input.classList.remove("selected");
+            question3_3_input.classList.remove("selected");
+            question3_4_input.classList.remove("selected");
+            question3_1_input.checked = false;
+            question3_2_input.checked = false;
+            question3_3_input.checked = false;
+            question3_4_input.checked = false;
+            question4_value = "";
+            question4s.forEach(question4 => {
+                question4.classList.remove("selected");
+                question4.checked = false;
+            });
+            selectedCount = 0;
+            selectedCount4 = 0;
+            question5.value = "";
+            question5_value = "";
+            question6.value = "";
+            question6_value = "";
+            question7.value = "";
+            question7_value = "";
+            checkQuestionValue();
+            navigateToView(4);
+        });
+
+        let mediaRecorder;
+        let audioChunks = [];
+
+        document.getElementById('recordButton').addEventListener('click', () => {
+            var imgElement = document.getElementById('recordImage');
+            if (mediaRecorder && mediaRecorder.state === "recording") {
+                
+                mediaRecorder.stop();
+                mediaRecorder.stream.getTracks().forEach(track => track.stop());
+
+                document.getElementById('recordButton').classList.remove('Rec')
+                document.getElementById('recordButton').classList.add('notRec')
+                imgElement.src = 'img/record_start.svg';
+                navigateToView(11)
+                
+            } else {
+                navigator.mediaDevices.getUserMedia({ audio: true, video: false })
+                    .then(stream => {
+                        mediaRecorder = new MediaRecorder(stream);
+                        audioChunks = [];
+
+                        mediaRecorder.ondataavailable = event => {
+                            audioChunks.push(event.data);
+                        };
+
+                        mediaRecorder.start();
+                        document.getElementById('recordButton').classList.remove('notRec')
+                        document.getElementById('recordButton').classList.add('Rec')
+                        imgElement.src = 'img/record_stop.svg';
+                        // document.getElementById('recordButton').textContent = 'Stop Recording';
+                        // document.getElementById('downloadButton').disabled = true;
+                    })
+                    .catch(error => console.error("Permission denied or error:", error));
+            }
+        });
+        document.getElementById('shareButton').addEventListener('click', () => {
+            //const audioBlob = new Blob(audioChunks, { type: 'audio/mp4' });
+            //saveAs(audioBlob, "recording.mp4");
+            // const a = document.createElement('a');
+            // a.href = audioBlobURL;
+            // a.download = 'recoding.mp4';
+            // document.body.appendChild(a);
+            // a.click();
+            // document.body.removeChild(a);
+            // audio.src = audioBlobURL;
+            let baseUrl = window.location.href.split('?')[0].split('#')[0];
+            if (!baseUrl.endsWith('/')) {
+                baseUrl += '/';
+            }
+
+            if (navigator.share) {
+                navigator.share({
+                    title: '請仔細聆聽，我的聲音',
+                    text: '請仔細聆聽，我的聲音',
+                    url: baseUrl + 'share.html' + '?voice=' + shareId,
+                }).then(function() {
+                    console.log('Shared successfully');
+                }).catch(function(error) {
+                    console.error('Error sharing:', error);
+                });
+            } else {
+                alert('Sharing is not supported on this browser. You can manually copy the URL.');
+            }
+        });
+
+        disclaimerClose.addEventListener('click', () => {
+            navigateToView(0);
+        });
+        disclaimerLink.addEventListener('click', () => {
+            navigateToView(15);
+        });
+    </script>
+</body>
+</html>
