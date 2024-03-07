@@ -42,7 +42,7 @@
                         <div class="row" style="height: 36vh;">
                             <div class="col-12 col-md-12">
                                 <form action="">
-                                    <input class="" type="text" name="" id="" style="width: 100%;" placeholder="請輸入instagram帳號">
+                                    <input class="" type="text" name="" id="input_view-1" style="width: 100%;" placeholder="請輸入instagram帳號">
                                 </form>
                                 <p style="font-size: small;">＊請確保您的帳號設為公開，以便搜索。</p>
                             </div>
@@ -64,7 +64,7 @@
                         <div class="row" style="height: 24vh;">
                             <div class="title-box mt-5">
                                 <div class="">
-                                    <p class="mb-1 mt-5" style="font-size: 1.4em;">請挑許一張照片</p>
+                                    <p class="mb-1 mt-5" style="font-size: 1.4em;">請挑選一張照片</p>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +72,7 @@
                     <div class="container-fluid mx-0 px-5">
                         <div class="row" style="height: 48vh;">
                             <div class="col-12 col-md-12" style="background-color: rgba(255, 255, 255, 0.2);">
-                                
+                                <div id="imageGrid" class="image-grid"></div>
                             </div>
                         </div>
                         <footer class="fixed-bottom">
@@ -176,6 +176,10 @@
         const v3Btn = document.getElementById('btn-view-3');
         const v4Btn = document.getElementById('btn-view-4');
 
+        const v1Input = document.getElementById('input_view-1');
+
+        const imageGrid = document.getElementById('imageGrid');
+
         const views = document.getElementsByClassName('view');
 
         function navigateToView(viewIndex) {
@@ -191,7 +195,37 @@
         }
 
         v1Btn.addEventListener('click', () => {
-            navigateToView(1);
+            const username = v1Input.value;
+            const url = `https://chatgptdemo.williamhsu.com.tw/ins_displays/?username=${username}`;
+
+            console.log(url)
+
+            fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.result === "success") {
+                    const urlList = data.data.url_list;
+                    console.log('URL List:', urlList);
+                    urlList.forEach((url, index) => {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = url;
+                        imgElement.alt = `Image ${index + 1}`;
+                        imgElement.addEventListener('click', () => selectImage(url));
+                        imageGrid.appendChild(imgElement);
+                    });
+                    navigateToView(1);
+                } else {
+                    console.error('Failed to fetch URL list');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
         });
         v2Btn.addEventListener('click', () => {
             navigateToView(2);
