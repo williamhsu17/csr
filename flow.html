@@ -31,10 +31,11 @@
             width: 100%;
             height: auto;
             cursor: pointer;
-            transition: transform 0.2s ease;
+            /* transition: transform 0.2s ease; */
         }
         .image-grid img:hover {
-            transform: scale(1.05);
+            /* transform: scale(1.05); */
+            border: black solid 1px;
         }
     </style>
     
@@ -54,7 +55,6 @@
                                 <div class="">
                                     <p class="mb-1 mt-5" style="font-size: 1.4em;">開始製作專屬卡片</p>
                                 </div>
-                                <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/431541231_25754910744096103_2452777999415173387_n.jpg?stp=c0.180.1440.1440a_dst-jpg_e35_s640x640_sh0.08&amp;_nc_ht=scontent-nrt1-1.cdninstagram.com&amp;_nc_cat=107&amp;_nc_ohc=1OekpgOGk50AX-DzYGv&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AfDEHmjmzoTm2ZxMXnVu4t6ndFcoIahffNwAUASEiXbBtQ&amp;oe=65EDA5FE&amp;_nc_sid=8b3546" crossorigin="anonymous" alt="Image 1">
                             </div>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                         <footer class="fixed-bottom">
                             <div class="container-fluid mt-5">
                                 <div class="row">
-                                    <button id="btn-view-2" class="next-btn mb-3">下一步</button>
+                                    <button id="btn-view-2" class="next-btn mb-3">重新輸入</button>
                                 </div>
                             </div>
                         </footer>
@@ -120,7 +120,10 @@
                     <div class="container-fluid mx-0">
                         <div class="row" style="height: 36vh;">
                             <div class="col-12 col-md-12">
-                                <img src="img/card_back.png" style="max-width: 100%; height: auto;" alt="">
+                                <div class="card_frame" style="position: relative;">
+                                    <img src="" id="user_image" style="max-width: 100%; height: auto; position: absolute; max-width:57%; top: 5%; left: 4%; border-radius: 5%;" alt="">
+                                    <img src="img/card_back.png" style="max-width: 100%; height: auto;" alt="">
+                                </div>
                             </div>
                         </div>
                         <footer class="fixed-bottom">
@@ -199,8 +202,11 @@
         const v1Input = document.getElementById('input_view-1');
 
         const imageGrid = document.getElementById('imageGrid');
+        const userImage = document.getElementById('user_image');
 
         const views = document.getElementsByClassName('view');
+
+        let select_image = ''
 
         function navigateToView(viewIndex) {
             for (let i = 0; i < views.length; i++) {
@@ -213,12 +219,35 @@
                 }
             }
         }
+        function handleImageClick(src) {
+            select_image = src;
+            userImage.src = src;
+            navigateToView(2);
+        }
+        function base64ToBlob(base64, mimeType) {
+            var byteCharacters = atob(base64.split(',')[1]);
+            var byteArrays = [];
+
+            for (var offset = 0; offset < byteCharacters.length; offset += 512) {
+                var slice = byteCharacters.slice(offset, offset + 512);
+
+                var byteNumbers = new Array(slice.length);
+                for (var i = 0; i < slice.length; i++) {
+                    byteNumbers[i] = slice.charCodeAt(i);
+                }
+
+                var byteArray = new Uint8Array(byteNumbers);
+
+                byteArrays.push(byteArray);
+            }
+
+            var blob = new Blob(byteArrays, {type: mimeType});
+            return blob;
+        }
 
         v1Btn.addEventListener('click', () => {
             const username = v1Input.value;
             const url = `https://chatgptdemo.williamhsu.com.tw/ins_displays/?username=${username}`;
-
-            console.log(url)
 
             fetch(url)
             .then(response => {
@@ -234,6 +263,9 @@
                         const imgElement = document.createElement('img');
                         imgElement.src = 'data:image/jpeg;base64,' + base64String;
                         imgElement.alt = `Image ${index + 1}`;
+                        imgElement.addEventListener('click', () => {
+                            handleImageClick(imgElement.src);
+                        });
                         imageGrid.appendChild(imgElement);
                     });
                     navigateToView(1);
@@ -246,12 +278,32 @@
             });
         });
         v2Btn.addEventListener('click', () => {
-            navigateToView(2);
+            navigateToView(0);
         });
         v3Btn.addEventListener('click', () => {
             navigateToView(3);
         });
         v4Btn.addEventListener('click', () => {
+            var imageBlob = base64ToBlob(select_image, 'image/png');
+
+            var formData = new FormData();
+
+            formData.append('vioce_url', 'https://www.speakwithlove.tw/share?voice=350');
+            formData.append('file', imageBlob, 'user.png');
+
+            // formData.append('file', file, 'cathy2.png');
+
+            // Make the fetch request
+            fetch('http://192.168.1.100:8000/11action', {
+                method: 'POST',
+                headers: {
+                    'accept': 'application/json',
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
             navigateToView(4);
         });
 
