@@ -18,6 +18,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+            padding: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .image-grid img:hover {
+            transform: scale(1.05);
+        }
+    </style>
     
     <noscript>
         <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=750960875270921&ev=PageView&noscript=1"/>
@@ -35,6 +54,7 @@
                                 <div class="">
                                     <p class="mb-1 mt-5" style="font-size: 1.4em;">開始製作專屬卡片</p>
                                 </div>
+                                <img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/431541231_25754910744096103_2452777999415173387_n.jpg?stp=c0.180.1440.1440a_dst-jpg_e35_s640x640_sh0.08&amp;_nc_ht=scontent-nrt1-1.cdninstagram.com&amp;_nc_cat=107&amp;_nc_ohc=1OekpgOGk50AX-DzYGv&amp;edm=AOQ1c0wBAAAA&amp;ccb=7-5&amp;oh=00_AfDEHmjmzoTm2ZxMXnVu4t6ndFcoIahffNwAUASEiXbBtQ&amp;oe=65EDA5FE&amp;_nc_sid=8b3546" crossorigin="anonymous" alt="Image 1">
                             </div>
                         </div>
                     </div>
@@ -210,12 +230,10 @@
             .then(data => {
                 if (data.result === "success") {
                     const urlList = data.data.url_list;
-                    console.log('URL List:', urlList);
-                    urlList.forEach((url, index) => {
+                    urlList.forEach((base64String, index) => {
                         const imgElement = document.createElement('img');
-                        imgElement.src = url;
+                        imgElement.src = 'data:image/jpeg;base64,' + base64String;
                         imgElement.alt = `Image ${index + 1}`;
-                        imgElement.addEventListener('click', () => selectImage(url));
                         imageGrid.appendChild(imgElement);
                     });
                     navigateToView(1);
