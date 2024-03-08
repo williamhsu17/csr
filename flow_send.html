@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>為愛獻聲，讓AI替你說</title>
+    <link rel="icon" type="image/x-icon" href="img/LOGO-wave.ico">
+
+    <meta property="og:title" content="為愛獻聲，讓AI替你說">
+    <!-- <meta property="og:description" content="A brief description of your page"> -->
+    <meta property="og:image" content="img/fb_cover.png">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            padding: 10px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            /* transition: transform 0.2s ease; */
+        }
+        .image-grid img:hover {
+            /* transform: scale(1.05); */
+            border: black solid 1px;
+        }
+    </style>
+    
+    <noscript>
+        <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=750960875270921&ev=PageView&noscript=1"/>
+    </noscript>
+</head>
+<body>  
+    <div class="container">
+        <div class="row mt-0">
+            <div id="app" class="mx-0 px-0">
+                <!-- start view-1 -->
+                <div id="view-1" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 36vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.4em;">開始製作專屬卡片</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0 px-5">
+                        <div class="row" style="height: 36vh;">
+                            <div class="col-12 col-md-12">
+                                <form action="">
+                                    <input class="" type="text" name="" id="input_view-1" style="width: 100%;" placeholder="請輸入instagram帳號">
+                                </form>
+                                <p style="font-size: small;">＊請確保為公開帳號，並請輸入完整帳號。</p>
+                            </div>
+                        </div>
+                        <footer class="fixed-bottom">
+                            <div class="container-fluid mt-5">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button id="btn-view-1-skip" class="next-btn mb-3">略過</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button id="btn-view-1" class="next-btn mb-3">搜尋</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                    <div class="ball-1"></div>
+                </div>
+                <!-- end view-1 -->
+                <!-- start view-2 -->
+                <div id="view-2" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 24vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.4em;">請挑選一張照片</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0 px-5">
+                        <div class="row" style="height: 48vh;">
+                            <div class="col-12 col-md-12" style="background-color: rgba(255, 255, 255, 0.2);">
+                                <div id="imageGrid" class="image-grid"></div>
+                            </div>
+                        </div>
+                        <footer class="fixed-bottom">
+                            <div class="container-fluid mt-5">
+                                <div class="row">
+                                    <button id="btn-view-2" class="next-btn mb-3">重新輸入帳號</button>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                    <div class="ball-1"></div>
+                </div>
+                <!-- end view-2 -->
+                <!-- start view-3 -->
+                <div id="view-3" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 36vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.4em;">確認照片</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0">
+                        <div class="row" style="height: 36vh;">
+                            <div class="col-12 col-md-12">
+                                <div class="card_frame" style="position: relative;">
+                                    <img src="" id="user_image" style="max-width: 100%; height: auto; position: absolute; max-width:57%; top: 5%; left: 4%; border-radius: 5%;" alt="">
+                                    <img src="img/card_back.png" style="max-width: 100%; height: auto;" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="fixed-bottom">
+                            <div class="container-fluid mt-5">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <button id="btn-view-3-repick" class="next-btn mb-3">重選照片</button>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button id="btn-view-3" class="next-btn mb-3">完成</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                    <div class="ball-1"></div>
+                </div>
+                <!-- end view-3 -->
+                <!-- start view-4 -->
+                <div id="view-4" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 48vh;">
+                            <div class="title-box mt-5">
+                                <div class="">
+                                    <p class="mb-1 mt-5" style="font-size: 1.4em;">請留下email寄送檔案</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0 px-5">
+                        <div class="row" style="height: 24vh;">
+                            <div class="col-12 col-md-12">
+                                <form action="">
+                                    <input class="" type="text" name="" id="" style="width: 100%;" placeholder="輸入email">
+                                </form>
+                            </div>
+                        </div>
+                        <footer class="fixed-bottom">
+                            <div class="container-fluid mt-5">
+                                <div class="row">
+                                    <button id="btn-view-4" class="next-btn mb-3">送出</button>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                    <div class="ball-4"></div>
+                </div>
+                <!-- end view-4 -->
+                <!-- start view-5 -->
+                <div id="view-5" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 36vh;">
+                        </div>
+                    </div>
+                    <div class="container-fluid mx-0 px-5">
+                        <div class="row" style="height: 24vh;">
+                            <div class="col-12 col-md-12">
+                                <p class="mb-2 mt-1" style="font-size: 1.2em;">愛的發聲卡 印製中</p>
+                                <p class="mb-3 mt-1" style="font-size: 1.2em;">卡片列印約3-5分鐘</p>
+                                <p class="mb-3 mt-1" style="font-size: 1.2em;">請至隔壁機台等候…</p>
+                                <p class="mb-3 mt-1" style="font-size: 0.7em;">卡片印製完成後，靠近手機後方感應可聽到AI音檔</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <!-- end view-5 -->
+                <!-- start view-6 -->
+                <div id="view-6" class="view hidden">
+                    <div class="container-fluid">
+                        <div class="row" style="height: 12vh;">
+                            <div class="title-box">
+                                <div class="">
+                                    <p class="mt-5 mb-0" style="font-size: 2.4em;">為愛獻聲，讓愛留存</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row justify-content-center">
+                            <div class="col-12 record_message_box">
+                                <img src="img/soundcard.svg" class="mb-3" style="width: 100%;" alt="">
+                                <p class="mb-1" style="color: #3B3B3B;">錄下同意器官捐贈的任何心聲</p>
+                                <p class="mb-1" style="color: #3B3B3B;">讓你的愛和理想</p>
+                                <p class="mb-3" style="color: #3B3B3B;">能被在乎的人聽見、留存記憶中</p>
+                            </div>
+                        </div>
+                        <div class="row mt-5">
+                            <div class="col-12">
+                                <button id="back_btn" class="more-btn mt-1">重新 為愛發聲</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ball-1"></div>
+                    <div class="ball-2"></div>
+                </div>
+                <!-- end view-6 -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script>
+        function getVoiceParameter() {
+            const queryParams = new URLSearchParams(window.location.search);
+            console.log(queryParams.get('voice'))
+            return queryParams.get('voice');
+        }
+        const voiceParam = getVoiceParameter();
+
+        const initView = document.getElementById('view-1')
+        initView.classList.remove('hidden');
+        
+        const v1BtnSkip = document.getElementById('btn-view-1-skip');
+        const v1Btn = document.getElementById('btn-view-1');
+        const v2Btn = document.getElementById('btn-view-2');
+        const v3Btn = document.getElementById('btn-view-3');
+        const v3BtnRepick = document.getElementById('btn-view-3-repick');
+        const v4Btn = document.getElementById('btn-view-4');
+        const backBtn = document.getElementById('back_btn');
+
+        const v1Input = document.getElementById('input_view-1');
+
+        const imageGrid = document.getElementById('imageGrid');
+        const userImage = document.getElementById('user_image');
+
+        const views = document.getElementsByClassName('view');
+
+        let select_image = ''
+
+        function navigateToView(viewIndex) {
+            for (let i = 0; i < views.length; i++) {
+                if (i === viewIndex) {
+                    views[i].classList.remove('hidden');
+                    // views[i].style.opacity = '1';
+                } else {
+                    views[i].classList.add('hidden');
+                    // views[i].style.opacity = '0';
+                }
+            }
+        }
+        function handleImageClick(src) {
+            select_image = src;
+            userImage.src = src;
+            navigateToView(2);
+        }
+        function base64ToBlob(base64, mimeType) {
+            var byteCharacters = atob(base64.split(',')[1]);
+            var byteArrays = [];
+
+            for (var offset = 0; offset < byteCharacters.length; offset += 512) {
+                var slice = byteCharacters.slice(offset, offset + 512);
+
+                var byteNumbers = new Array(slice.length);
+                for (var i = 0; i < slice.length; i++) {
+                    byteNumbers[i] = slice.charCodeAt(i);
+                }
+
+                var byteArray = new Uint8Array(byteNumbers);
+
+                byteArrays.push(byteArray);
+            }
+
+            var blob = new Blob(byteArrays, {type: mimeType});
+            return blob;
+        }
+
+        v1Btn.addEventListener('click', () => {
+            const username = v1Input.value;
+            const url = `https://chatgptdemo.williamhsu.com.tw/ins_displays/?username=${username}`;
+
+            fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.result === "success") {
+                    const urlList = data.data.url_list;
+                    urlList.forEach((base64String, index) => {
+                        const imgElement = document.createElement('img');
+                        imgElement.src = 'data:image/jpeg;base64,' + base64String;
+                        imgElement.alt = `Image ${index + 1}`;
+                        imgElement.addEventListener('click', () => {
+                            handleImageClick(imgElement.src);
+                        });
+                        imageGrid.appendChild(imgElement);
+                    });
+                    navigateToView(1);
+                } else {
+                    console.error('Failed to fetch URL list');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        });
+        v1BtnSkip.addEventListener('click', () => {
+            imageGrid.innerHTML='';
+            navigateToView(3);
+        });
+        v2Btn.addEventListener('click', () => {
+            imageGrid.innerHTML='';
+            navigateToView(0);
+        });
+        v3BtnRepick.addEventListener('click', () => {
+            navigateToView(1);
+        });
+        v3Btn.addEventListener('click', () => {
+            navigateToView(3);
+        });
+        v4Btn.addEventListener('click', () => {
+            var imageBlob = base64ToBlob(select_image, 'image/png');
+
+            var formData = new FormData();
+
+            const voice_url = `https://www.speakwithlove.tw/share?voice=${voiceParam}`;
+            formData.append('vioce_url', voice_url);
+            formData.append('file', imageBlob, 'user.png');
+
+            // formData.append('file', file, 'cathy2.png');
+
+            // Make the fetch request
+            fetch('http://192.168.1.100:8000/11action', {
+                method: 'POST',
+                headers: {
+                    'accept': 'application/json',
+                },
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error('Error:', error));
+            navigateToView(4);
+            setTimeout(function() {
+                navigateToView(5);
+            }, 6000);
+        });
+
+        backBtn.addEventListener('click', () => {
+            window.location.href = 'flow.html';
+        });
+        const playGeneratedAudioButton = document.getElementById("playGeneratedAudioButton");
+        playGeneratedAudioButton.addEventListener("click", () => {
+            console.log('playGeneratedAudio')
+            const audio = document.getElementById("audio");
+    
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        });
+        function getVoiceParameter() {
+            const queryParams = new URLSearchParams(window.location.search);
+            console.log(queryParams.get('voice'))
+            return queryParams.get('voice');
+        }
+    </script>
+</body>
+</html>
