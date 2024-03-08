@@ -366,7 +366,7 @@
             
             var formData = new FormData();
             
-            const voice_url = `https://www.speakwithlove.tw/share?share_id=${voiceParam}`;
+            const voice_url = `https://www.speakwithlove.tw/share?voice=${voiceParam}`;
             formData.append('vioce_url', voice_url);
             if (select_image !== "") {
                 var imageBlob = base64ToBlob(select_image, 'image/png');
@@ -389,7 +389,7 @@
             navigateToView(4);
             setTimeout(function() {
                 const email = emailInput.value;
-                const url = `https://chatgptdemo.williamhsu.com.tw/send_speakwithlove_email/?email=${email}&voice_id=${voiceParam}`;
+                const url = `https://chatgptdemo.williamhsu.com.tw/send_speakwithlove_email/?email=${email}&share_id=${voiceParam}`;
 
                 fetch(url)
                 .then(response => {
