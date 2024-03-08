@@ -127,7 +127,7 @@
                             <div class="col-12 col-md-12">
                                 <div class="card_frame" style="position: relative;">
                                     <img src="" id="user_image" style="max-width: 100%; height: auto; position: absolute; max-width:57%; top: 5%; left: 4%; border-radius: 5%;" alt="">
-                                    <img src="img/card_back.png" style="max-width: 100%; height: auto;" alt="">
+                                    <img src="img/card_back.png" id="card_image" style="max-width: 100%; height: auto;" alt="">
                                 </div>
                             </div>
                         </div>
@@ -225,6 +225,19 @@
                                 <button id="back_btn" class="more-btn mt-1">重新 為愛發聲</button>
                             </div>
                         </div>
+                        <div class="row mt-5">
+                            <div class="col-md-12">
+                                <p style="color: #3B3B3B; font-size: 0.9em; text-align: left;">器官捐贈申請諮詢: torsc@mail.torsc.org.tw</p>
+                                <p style="color: #3B3B3B; font-size: 0.9em; text-align: left;">聲紋卡系統諮詢: service@organ-donation-voice.tw</p>
+                                <p style="color: #3B3B3B; font-size: 0.9em; text-align: left;">免付費服務電話: 0800-888-067</p>
+                            </div>
+                            <div class="col-12" style="text-align: right;">
+                                <img src="img/PublicsGroup.png" alt="" style="height: 40px; width: auto;" class="mx-3">
+                                <img src="img/group.png" alt="" style="height: 40px; width: auto;">
+                                <img src="img/department.png" alt="" style="height: 40px; width: auto;" class="mx-3">
+                            </div>
+                            
+                        </div>
                     </div>
                     <div class="ball-1"></div>
                     <div class="ball-2"></div>
@@ -257,6 +270,7 @@
 
         const imageGrid = document.getElementById('imageGrid');
         const userImage = document.getElementById('user_image');
+        const cardImage = document.getElementById('card_image');
 
         const views = document.getElementsByClassName('view');
 
@@ -333,6 +347,7 @@
         });
         v1BtnSkip.addEventListener('click', () => {
             imageGrid.innerHTML='';
+            // cardImage.src = 'img/card_back_default.png'
             navigateToView(3);
         });
         v2Btn.addEventListener('click', () => {
