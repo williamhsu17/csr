@@ -162,7 +162,7 @@
                         <div class="row" style="height: 24vh;">
                             <div class="col-12 col-md-12">
                                 <form action="">
-                                    <input class="" type="text" name="" id="" style="width: 100%;" placeholder="輸入email">
+                                    <input class="" type="text" name="" id="email_input" style="width: 100%;" placeholder="輸入email">
                                 </form>
                             </div>
                         </div>
@@ -272,6 +272,8 @@
         const userImage = document.getElementById('user_image');
         const cardImage = document.getElementById('card_image');
 
+        const emailInput = document.getElementById('email_input');
+
         const views = document.getElementsByClassName('view');
 
         let select_image = ''
@@ -361,13 +363,15 @@
             navigateToView(3);
         });
         v4Btn.addEventListener('click', () => {
-            var imageBlob = base64ToBlob(select_image, 'image/png');
-
+            
             var formData = new FormData();
-
-            const voice_url = `https://www.speakwithlove.tw/share?voice=${voiceParam}`;
+            
+            const voice_url = `https://www.speakwithlove.tw/share?share_id=${voiceParam}`;
             formData.append('vioce_url', voice_url);
-            formData.append('file', imageBlob, 'user.png');
+            if (select_image !== "") {
+                var imageBlob = base64ToBlob(select_image, 'image/png');
+                formData.append('file', imageBlob, 'user.png');
+            }
 
             // formData.append('file', file, 'cathy2.png');
 
@@ -384,6 +388,18 @@
             .catch(error => console.error('Error:', error));
             navigateToView(4);
             setTimeout(function() {
+                const email = emailInput.value;
+                const url = `https://chatgptdemo.williamhsu.com.tw/send_speakwithlove_email/?email=${email}&voice_id=${voiceParam}`;
+
+                fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
                 navigateToView(5);
             }, 6000);
         });
