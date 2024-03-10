@@ -71,8 +71,14 @@
         });
         function getVoiceParameter() {
             const queryParams = new URLSearchParams(window.location.search);
-            console.log(queryParams.get('voice'))
-            return queryParams.get('voice');
+            const voiceParam = queryParams.get('voice');
+            const idParam = queryParams.get('id');
+            if (voiceParam !== null) {
+                return voiceParam;
+            } else if (idParam !== null) {
+                return idParam;
+            }
+            return 1;
         }
 
         async function getMp3Url(voiceParam) {
